@@ -1,3 +1,8 @@
+> [!NOTE]
+> **A quick disclaimer**
+>
+> Everything in this repo was automated with AI. I thought the findings were interesting, so I decided to share them.
+
 # RTK Research
 
 Experiments and research notes on [RTK](https://github.com/rtk-ai/rtk), a CLI proxy that compresses command output for coding agents.
