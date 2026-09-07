@@ -1,0 +1,14 @@
+[
+  [
+    "commands",
+    "CREATE TABLE commands (\n            id INTEGER PRIMARY KEY,\n            timestamp TEXT NOT NULL,\n            original_cmd TEXT NOT NULL,\n            rtk_cmd TEXT NOT NULL,\n            input_tokens INTEGER NOT NULL,\n            output_tokens INTEGER NOT NULL,\n            saved_tokens INTEGER NOT NULL,\n            savings_pct REAL NOT NULL\n        , exec_time_ms INTEGER DEFAULT 0, project_path TEXT DEFAULT '')"
+  ],
+  [
+    "parse_failures",
+    "CREATE TABLE parse_failures (\n            id INTEGER PRIMARY KEY,\n            timestamp TEXT NOT NULL,\n            raw_command TEXT NOT NULL,\n            error_message TEXT NOT NULL,\n            fallback_succeeded INTEGER NOT NULL DEFAULT 0\n        )"
+  ],
+  [
+    "hook_decisions",
+    "CREATE TABLE hook_decisions (\n            id INTEGER PRIMARY KEY,\n            timestamp TEXT NOT NULL,\n            session_id TEXT NOT NULL,\n            tool_use_id TEXT NOT NULL,\n            project_path TEXT DEFAULT '',\n            raw_cmd TEXT NOT NULL,\n            decision TEXT NOT NULL,\n            rewritten_cmd TEXT,\n            rtk_version TEXT NOT NULL\n        )"
+  ]
+]

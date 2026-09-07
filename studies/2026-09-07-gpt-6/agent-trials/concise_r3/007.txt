@@ -1,0 +1,57 @@
+{
+  "deployments": [
+    {
+      "name": "worker-00",
+      "region": "eu-west-1",
+      "ready": true
+    },
+    {
+      "name": "worker-01",
+      "region": "eu-west-1",
+      "ready": true
+    },
+    {
+      "name": "worker-02",
+      "region": "eu-west-1",
+      "ready": true
+    },
+    {
+      "name": "worker-03",
+      "region": "eu-west-1",
+      "ready": true
+    },
+    {
+      "name": "worker-04",
+      "region": "eu-west-1",
+      "ready": true
+    },
+    {
+      "name": "worker-05",
+      "region": "eu-west-1",
+      "ready": true
+    },
+    {
+      "name": "worker-06",
+      "region": "eu-west-1",
+      "ready": true
+    },
+    {
+      "name": "worker-07",
+      "region": "eu-west-1",
+      "ready": true
+    },
+    {
+      "name": "worker-08",
+      "region": "eu-west-1",
+      "ready": true
+    },
+    {
+      "name": "worker-09",
+      "region": "eu-west-1",
+      "ready": true
+    },
+    {
+      "name": "worker-10",
+      "region": "eu-west-1",
+      "ready": true
+    },

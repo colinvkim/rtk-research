@@ -1,0 +1,23 @@
+{
+  "date": "2026-07-09",
+  "model_context": "GPT-5.6",
+  "model_context_source": "Repository owner identified the supplied July research as GPT-5.6 findings.",
+  "study_type": "Command-level comparison with hand-selected baselines; no isolated agent trial.",
+  "rtk_version": "0.43.0",
+  "tiktoken_version": "0.13.0",
+  "tokenizer": "o200k_base",
+  "case_count": 8,
+  "facts_source": "REPORT.md and preserved benchmark harness",
+  "execution_time_source_commit": null,
+  "source_checkout_commit_observed_during_packaging": "5d32d0736f686b69d1e8b9dc45c007d4eb77a0a2",
+  "source_commit_caveat": "The report did not record an execution-time source revision; the observed checkout is not asserted to be that revision.",
+  "available_evidence": [
+    "original report",
+    "original harness",
+    "three synthetic fixtures"
+  ],
+  "missing_evidence": [
+    "saved historical benchmark JSON",
+    "complete historical stdout/stderr captures"
+  ]
+}

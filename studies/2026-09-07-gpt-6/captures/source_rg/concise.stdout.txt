@@ -1,0 +1,4 @@
+1657:pub fn estimate_tokens(text: &str) -> usize {
+1658-    // ~4 chars per token on average
+1659-    (text.len() as f64 / 4.0).ceil() as usize
+1660-}

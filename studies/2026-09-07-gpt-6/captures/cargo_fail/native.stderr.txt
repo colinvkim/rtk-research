@@ -1,0 +1,3 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.00s
+     Running unittests src/lib.rs (target/debug/deps/rtk_output_experiment-11fae9472a8af045)
+error: test failed, to rerun pass `--lib`

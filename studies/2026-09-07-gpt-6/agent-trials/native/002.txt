@@ -1,0 +1,12 @@
+commit 7465d41bcb25041da6f801db377807f96020c820
+Author:     RTK Experiment <experiment@example.invalid>
+AuthorDate: Tue Sep 1 12:00:00 2026 +0000
+Commit:     RTK Experiment <experiment@example.invalid>
+CommitDate: Tue Sep 1 12:00:00 2026 +0000
+
+    feat: prepare adapter release
+    
+    Migrate the adapter before deploying.
+    
+    DEPLOYMENT_PRECONDITION: database schema must be 17.
+    ROLLBACK_REQUIREMENT: restore snapshot snap-2026-08-31 before downgrade.

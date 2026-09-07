@@ -1,0 +1,8 @@
+{
+  deployments:
+  [{
+      name: "worker-00"
+      ready: true
+      region: "eu-west-1"
+    }, ... +15 more]
+}

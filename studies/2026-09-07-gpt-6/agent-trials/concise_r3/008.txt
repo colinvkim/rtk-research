@@ -1,0 +1,8 @@
+long_routes.py:1:route("/admin/export", description="A routine diagnostic endpoint with documented ownership. A routine diagnostic endpoint with documented ownership. A routine diagnostic endpoint with documented ownership. A routine diagnostic endpoint with documented ownership. A routine diagnostic endpoint with documented ownership. A routine diagnostic endpoint with documented ownership. A routine diagnostic endpoint with documented ownership. A routine diagnostic endpoint with documented ownership. A routine diagnostic endpoint with documented ownership. A routine diagnostic endpoint with documented ownership. A routine diagnostic endpoint with documented ownership. A routine diagnostic endpoint with documented ownership. A routine diagnostic endpoint with documented ownership. A routine diagnostic endpoint with documented ownership. A routine diagnostic endpoint with documented ownership. ", requires_auth=False)
+--
+routes.py-36-allow_policy("/public/route-35", roles=["reader"])
+routes.py-37-allow_policy("/public/route-36", roles=["reader"])
+routes.py-38-allow_policy("/public/route-37", roles=["reader"])
+routes.py-39-allow_policy("/public/route-38", roles=["reader"])
+routes.py-40-allow_policy("/public/route-39", roles=["reader"])
+routes.py:41:allow_policy("/admin/archive", roles=["anonymous"])

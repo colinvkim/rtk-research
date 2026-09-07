@@ -1,0 +1,11 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.14.6, pytest-9.1.1, pluggy-1.6.0
+rootdir: /workspace/rtk-experiment/work/fixture
+configfile: pytest.ini
+collected 1 item
+
+tests/test_skipped.py s                                                  [100%]
+
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_skipped.py:3: INTEGRATION_BLOCKER: staging database schema 17 is required
+============================== 1 skipped in 0.00s ==============================

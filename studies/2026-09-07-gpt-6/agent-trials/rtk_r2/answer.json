@@ -1,0 +1,42 @@
+{
+  "q1": {
+    "passed": 160,
+    "failed": 2,
+    "files": {
+      "tests/test_pass.py": {"passed": 160, "failed": 0},
+      "tests/test_failure.py": {"passed": 0, "failed": 2}
+    },
+    "failures": [
+      {"test": "test_invoice_cents", "root_cause": "invoice_total converts each price to int before summing, discarding the fractional amounts; 10.75 and 20.25 become 10 and 20, returning 30 instead of 31.0."},
+      {"test": "test_order_region", "root_cause": "The actual dictionary hardcodes region us-east-1 while the expected dictionary requires eu-west-1. The order_id and state match."}
+    ]
+  },
+  "q2": {
+    "passed": 1,
+    "failed": 0,
+    "migration_deadline_reported": true,
+    "release": "3.2",
+    "replacement_adapter": "adapter_v2",
+    "detail": "The DeprecationWarning says the legacy adapter is removed in release 3.2; use adapter_v2. The initial filtered test summary omitted this warning, which was recovered by a raw rerun."
+  },
+  "q3": {
+    "deployment_precondition": "Migrate the adapter before deploying; database schema must be 17.",
+    "rollback_requirement": "Restore snapshot snap-2026-08-31 before downgrade."
+  },
+  "q4": {
+    "boolean_changes": [
+      {"setting": "REQUIRE_VERIFIED_CONSENT", "before": true, "after": false, "security_implication": "Disables the verified-consent requirement, weakening the consent safeguard and permitting affected operations without verified consent."}
+    ],
+    "detail": "This is the only boolean setting change. The other changes increment numeric thresholds. There are no staged changes to settings.py."
+  },
+  "q5": {
+    "admin_archive_roles": ["anonymous"],
+    "admin_export_requires_authentication": false
+  },
+  "q6": {
+    "not_ready": [
+      {"name": "worker-15", "region": "eu-west-1", "reason": "schema version 17 missing"}
+    ]
+  },
+  "additional_reads": "Used rtk proxy pytest with -vv to recover the truncated region assertion and read the failing tests to establish the invoice root cause. Reran the legacy test through rtk proxy with -W always to recover the omitted deprecation warning. Used rtk proxy git diff to recover the truncated settings additions and checked the staged diff for completeness. The combined route and deployment read was complete."
+}

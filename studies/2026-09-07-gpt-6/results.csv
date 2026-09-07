@@ -1,0 +1,55 @@
+case,group,arm,command,bytes,rtk_estimate,o200k_tokens,cl100k_tokens,command_o200k_tokens,median_ms,exit_code,missing_probes,recovery_hint
+cargo_pass,routine,native,cargo test --offline check_,3183,796,994,991,6,26.782,0,,False
+cargo_pass,routine,rtk,rtk cargo test --offline check_,56,14,21,21,8,30.131,0,,False
+cargo_pass,routine,concise,cargo test --offline -q check_,225,57,50,51,8,25.731,0,,False
+cargo_fail,routine,native,cargo test --offline,3570,893,1109,1104,4,25.098,101,,False
+cargo_fail,routine,rtk,rtk cargo test --offline,422,106,136,134,6,29.37,101,,True
+cargo_fail,routine,concise,cargo test --offline -q,616,154,169,167,6,23.995,101,,False
+pytest_pass,routine,native,pytest tests/test_pass.py,591,148,122,120,5,125.564,0,,False
+pytest_pass,routine,rtk,rtk pytest tests/test_pass.py,19,5,7,7,7,126.909,0,,False
+pytest_pass,routine,concise,pytest -q tests/test_pass.py,260,65,29,29,7,123.379,0,,False
+pytest_fail,routine,native,pytest tests/test_failure.py,1664,416,405,401,5,104.196,1,,False
+pytest_fail,routine,rtk,rtk pytest tests/test_failure.py,463,116,146,146,7,103.952,1,eu-west-1,True
+pytest_fail,routine,concise,pytest -q --tb=short tests/test_failure.py,1075,269,249,248,11,108.433,1,,False
+pytest_warning,routine,native,pytest tests/test_legacy.py,949,238,248,238,6,92.692,0,,False
+pytest_warning,routine,rtk,rtk pytest tests/test_legacy.py,17,5,7,7,8,96.711,0,LEGACY_ADAPTER_DEADLINE; 3.2; adapter_v2,False
+pytest_warning,routine,concise,pytest -q tests/test_legacy.py,630,158,156,149,8,92.987,0,,False
+pytest_skip,routine,native,pytest -rs tests/test_skipped.py,606,152,144,141,8,90.496,0,,False
+pytest_skip,routine,rtk,rtk pytest -rs tests/test_skipped.py,38,10,15,15,10,95.179,0,INTEGRATION_BLOCKER; schema 17,False
+pytest_skip,routine,concise,pytest -q -rs tests/test_skipped.py,277,70,52,51,10,89.77,0,,False
+git_status,routine,native,git status,554,139,156,156,2,15.745,0,,False
+git_status,routine,rtk,rtk git status,152,38,49,49,4,28.2,0,,False
+git_status,routine,concise,git status --short,130,33,41,41,4,16.026,0,,False
+git_diff_small,routine,native,git diff -- policy.py,285,72,87,87,5,14.84,0,,False
+git_diff_small,routine,rtk,rtk git diff -- policy.py,281,71,81,81,7,27.242,0,,False
+git_diff_small,routine,concise,git diff -U1 -- policy.py,235,59,76,76,8,14.95,0,,False
+git_diff_large,boundary,native,git diff -- settings.py,3771,943,1868,1865,5,15.159,0,,False
+git_diff_large,boundary,rtk,rtk git diff -- settings.py,2245,562,1072,1070,7,27.273,0,+REQUIRE_VERIFIED_CONSENT = False,False
+git_diff_large,boundary,concise,git diff -U0 -- settings.py | rg '^[+-][A-Z_]+ = (True|False)',67,17,22,20,24,16.47,0,,False
+git_log_body,routine,native,git log -1,359,90,105,103,4,15.307,0,,False
+git_log_body,routine,rtk,rtk git log -1,238,60,63,61,6,18.504,0,,False
+git_log_body,routine,concise,git log -1 --format=%B,197,50,45,44,8,14.889,0,,False
+rg_many,boundary,native,rg -n allow_policy routes.py,2206,552,612,612,7,8.889,0,,False
+rg_many,boundary,rtk,rtk rg -n allow_policy routes.py,1467,367,419,419,9,12.685,0,anonymous,True
+rg_many,boundary,concise,rg -n /admin/archive routes.py,55,14,12,12,8,8.756,0,,False
+rg_long,boundary,native,rg -n /admin/export long_routes.py,917,230,134,134,9,8.582,0,,False
+rg_long,boundary,rtk,rtk rg -n /admin/export long_routes.py,917,230,134,134,11,12.086,0,,False
+rg_long,boundary,concise,rg -n -o 'requires_auth=[^)]+' long_routes.py,22,6,6,6,15,8.437,0,,False
+read_default,routine,native,cat policy.py,226,57,48,48,3,7.08,0,,False
+read_default,routine,rtk,rtk read policy.py,226,57,48,48,5,10.112,0,,False
+read_default,routine,concise,cat policy.py,226,57,48,48,3,7.333,0,,False
+read_minimal,opt-in,native,cat policy.py,226,57,48,48,3,7.094,0,,False
+read_minimal,opt-in,rtk,rtk read -l minimal policy.py,144,36,31,31,8,9.735,0,RC-17,False
+read_minimal,opt-in,concise,cat policy.py,226,57,48,48,3,7.063,0,,False
+json_array,boundary,native,cat deployments.json,1496,374,485,485,3,7.054,0,,False
+json_array,boundary,rtk,rtk json deployments.json,113,29,36,36,5,9.979,0,worker-15; schema version 17 missing,False
+json_array,boundary,concise,"jq -c '.deployments[] | select(.ready == false) | {name, reason}' deployments.json",58,15,15,15,22,7.771,0,,False
+log_ids,boundary,native,cat events.log,1515,379,573,573,3,7.55,0,,False
+log_ids,boundary,rtk,rtk log events.log,183,46,67,67,5,10.703,0,9002; 12:01:05; failover complete,False
+log_ids,boundary,concise,rg 'ERROR|failover' events.log,165,42,63,63,9,9.014,0,,False
+source_rg,routine,native,rg -n estimate_tokens src/core/tracking.rs,950,238,302,299,10,8.321,0,text.len() as f64 / 4.0,False
+source_rg,routine,rtk,rtk rg -n estimate_tokens src/core/tracking.rs,950,238,302,299,12,12.142,0,text.len() as f64 / 4.0,False
+source_rg,routine,concise,rg -n -A3 '^pub fn estimate_tokens' src/core/tracking.rs,151,38,54,54,17,8.522,0,,False
+source_read,routine,native,cat src/core/guard.rs,1385,347,361,361,6,7.392,0,,False
+source_read,routine,rtk,rtk read src/core/guard.rs,1385,347,361,361,8,9.707,0,,False
+source_read,routine,concise,rg -n -A7 '^pub fn never_worse' src/core/guard.rs,198,50,66,66,18,8.713,0,,False

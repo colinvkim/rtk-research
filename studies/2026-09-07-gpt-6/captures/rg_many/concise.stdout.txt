@@ -1,0 +1,1 @@
+41:allow_policy("/admin/archive", roles=["anonymous"])

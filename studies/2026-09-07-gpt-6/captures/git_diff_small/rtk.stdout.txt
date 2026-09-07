@@ -1,0 +1,14 @@
+policy.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Changes:
+
+policy.py
+@@ -3,5 +3,5 @@ def may_delete_archive(role, verified):
+     if role != "operator":
+         return False
+     if not verified:
+-        return False
++        return True
+     return True
+  +1 -1

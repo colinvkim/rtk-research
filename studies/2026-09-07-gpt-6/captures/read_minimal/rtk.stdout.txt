@@ -1,0 +1,6 @@
+def may_delete_archive(role, verified):
+    if role != "operator":
+        return False
+    if not verified:
+        return True
+    return True

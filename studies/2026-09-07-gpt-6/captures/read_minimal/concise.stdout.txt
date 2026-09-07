@@ -1,0 +1,7 @@
+def may_delete_archive(role, verified):
+    # Retention covenant RC-17 requires both operator role and verified consent.
+    if role != "operator":
+        return False
+    if not verified:
+        return True
+    return True

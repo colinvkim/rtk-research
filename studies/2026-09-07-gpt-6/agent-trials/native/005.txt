@@ -1,0 +1,15 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.14.6, pytest-9.1.1, pluggy-1.6.0
+rootdir: /workspace/rtk-experiment/work/agents/native
+configfile: pytest.ini
+collected 1 item
+
+tests/test_legacy.py .                                                   [100%]
+
+=============================== warnings summary ===============================
+tests/test_legacy.py::test_legacy_adapter
+  /workspace/rtk-experiment/work/agents/native/tests/test_legacy.py:4: DeprecationWarning: LEGACY_ADAPTER_DEADLINE: legacy adapter is removed in release 3.2; use adapter_v2
+    warnings.warn("LEGACY_ADAPTER_DEADLINE: legacy adapter is removed in release 3.2; use adapter_v2", DeprecationWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+========================= 1 passed, 1 warning in 0.00s =========================

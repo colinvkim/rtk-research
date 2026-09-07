@@ -1,0 +1,52 @@
+{
+  "q1": {
+    "passed": 160,
+    "failed": 2,
+    "failures": [
+      {
+        "test": "tests/test_failure.py::test_invoice_cents",
+        "root_cause": "invoice_total converts each price to int before summing, discarding cents: 10.75 + 20.25 becomes 10 + 20 = 30 instead of 31.0."
+      },
+      {
+        "test": "tests/test_failure.py::test_order_region",
+        "root_cause": "The actual order ORD-7721 has region us-east-1, while the expected region is eu-west-1. The order_id and state match."
+      }
+    ]
+  },
+  "q2": {
+    "passed": 1,
+    "migration_deadline_reported": true,
+    "release": "3.2",
+    "replacement_adapter": "adapter_v2",
+    "detail": "A DeprecationWarning states that the legacy adapter is removed in release 3.2; use adapter_v2."
+  },
+  "q3": {
+    "deployment_precondition": "Migrate the adapter before deploying; database schema must be 17.",
+    "rollback_requirement": "Restore snapshot snap-2026-08-31 before downgrade."
+  },
+  "q4": {
+    "boolean_changes": [
+      {
+        "setting": "REQUIRE_VERIFIED_CONSENT",
+        "before": true,
+        "after": false,
+        "security_implication": "Disables the requirement for verified consent, weakening the consent safeguard for protected operations."
+      }
+    ],
+    "staged_settings_changes": false
+  },
+  "q5": {
+    "admin_archive_roles": ["anonymous"],
+    "admin_export_requires_authentication": false
+  },
+  "q6": {
+    "not_ready": [
+      {
+        "name": "worker-15",
+        "region": "eu-west-1",
+        "reason": "schema version 17 missing"
+      }
+    ]
+  },
+  "additional_reads": "The compact pytest output abbreviated the order mismatch and omitted the legacy warning, so I reran the failing and legacy tests through rtk proxy with -vv. The compact settings diff explicitly truncated additions, so I read the full diff through rtk proxy and also checked staged changes. I read the full commit body through rtk proxy to verify completeness. Direct file reads supplied the invoice implementation, complete route definitions, and all deployments."
+}

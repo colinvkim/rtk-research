@@ -1,0 +1,4 @@
+s                                                                        [100%]
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_skipped.py:3: INTEGRATION_BLOCKER: staging database schema 17 is required
+1 skipped in 0.00s

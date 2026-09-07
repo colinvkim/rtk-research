@@ -1,0 +1,8 @@
+6:pub fn never_worse<'a>(raw: &'a str, filtered: &'a str) -> &'a str {
+7-    if estimate_tokens(filtered) > estimate_tokens(raw) {
+8-        raw
+9-    } else {
+10-        filtered
+11-    }
+12-}
+13-

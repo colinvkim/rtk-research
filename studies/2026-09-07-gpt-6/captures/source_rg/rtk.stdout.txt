@@ -1,0 +1,15 @@
+1650:/// use rtk::tracking::estimate_tokens;
+1652:/// assert_eq!(estimate_tokens(""), 0);
+1653:/// assert_eq!(estimate_tokens("abcd"), 1);  // 4 chars = 1 token
+1654:/// assert_eq!(estimate_tokens("abcde"), 2); // 5 chars = ceil(1.25) = 2
+1655:/// assert_eq!(estimate_tokens("hello world"), 3); // 11 chars = ceil(2.75) = 3
+1657:pub fn estimate_tokens(text: &str) -> usize {
+1731:        let input_tokens = estimate_tokens(input);
+1732:        let output_tokens = estimate_tokens(output);
+1807:    // 1. estimate_tokens — verify ~4 chars/token ratio
+1809:    fn test_estimate_tokens() {
+1810:        assert_eq!(estimate_tokens(""), 0);
+1811:        assert_eq!(estimate_tokens("abcd"), 1); // 4 chars = 1 token
+1812:        assert_eq!(estimate_tokens("abcde"), 2); // 5 chars = ceil(1.25) = 2
+1813:        assert_eq!(estimate_tokens("a"), 1); // 1 char = ceil(0.25) = 1
+1814:        assert_eq!(estimate_tokens("12345678"), 2); // 8 chars = 2 tokens

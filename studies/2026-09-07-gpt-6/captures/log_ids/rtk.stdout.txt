@@ -1,0 +1,8 @@
+Log Summary
+   [error] 2 errors (1 unique)
+   [warn] 0 warnings (0 unique)
+   [info] 31 info messages
+
+[ERRORS]
+   [×2] 2026-09-01T12:01:00 ERROR request 7001 failed on /api/orders
+

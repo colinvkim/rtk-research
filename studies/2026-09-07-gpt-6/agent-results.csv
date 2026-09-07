@@ -1,0 +1,10 @@
+run,arm,questions_correct_manual,calls,tool_output_tokens,tool_output_excluding_task,native_command_tokens,explicit_raw_bypass_calls,child_command_wall_ms,command_plus_output_tokens,observed_output_tokens,additional_unrecorded_attempts,observed_output_plus_command_tokens
+concise,concise,6,13,4289,4044,170,0,348.19800000000004,4459,4216,0,4386
+concise_r2,concise,6,10,3113,2868,97,0,324.005,3210,3198,1,3295
+concise_r3,concise,6,9,3406,3161,108,0,226.93,3514,3406,0,3514
+native,native,6,10,4321,4076,59,0,585.616,4380,4321,0,4380
+native_r2,native,6,9,6153,5908,56,0,393.023,6209,6153,0,6209
+native_r3,native,6,9,4235,3990,57,0,352.616,4292,4235,0,4292
+rtk,rtk,6,11,5761,5516,87,4,461.463,5848,5761,0,5848
+rtk_r2,rtk,6,11,5838,5593,92,4,602.1700000000001,5930,5838,0,5930
+rtk_r3,rtk,6,13,5084,4839,74,2,433.678,5158,5084,0,5158

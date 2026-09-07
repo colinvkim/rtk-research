@@ -1,0 +1,8 @@
+[
+  {
+    "name": "worker-15",
+    "region": "eu-west-1",
+    "ready": false,
+    "reason": "schema version 17 missing"
+  }
+]

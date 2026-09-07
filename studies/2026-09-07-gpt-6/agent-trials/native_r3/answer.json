@@ -1,0 +1,52 @@
+{
+  "q1": {
+    "passed": 160,
+    "failed": 2,
+    "failures": [
+      {
+        "test": "tests/test_failure.py::test_invoice_cents",
+        "root_cause": "invoice_total converts each price to int before summing, truncating 10.75 to 10 and 20.25 to 20; it returns 30 instead of 31.0."
+      },
+      {
+        "test": "tests/test_failure.py::test_order_region",
+        "root_cause": "The hard-coded actual order region is us-east-1, but the expected region is eu-west-1; order_id and state match."
+      }
+    ]
+  },
+  "q2": {
+    "passed": 1,
+    "migration_deadline_reported": true,
+    "release": "3.2",
+    "replacement_adapter": "adapter_v2",
+    "detail": "A DeprecationWarning states that the legacy adapter is removed in release 3.2."
+  },
+  "q3": {
+    "deployment_precondition": "Migrate the adapter before deploying; database schema must be 17.",
+    "rollback_requirement": "Restore snapshot snap-2026-08-31 before downgrade."
+  },
+  "q4": {
+    "boolean_changes": [
+      {
+        "setting": "REQUIRE_VERIFIED_CONSENT",
+        "before": true,
+        "after": false,
+        "security_implication": "Disables the verified-consent requirement, weakening the consent safeguard; the archive policy comment requires verified consent alongside the operator role."
+      }
+    ],
+    "staged_settings_changes": false
+  },
+  "q5": {
+    "admin_archive_allowed_roles": ["anonymous"],
+    "admin_export_requires_authentication": false
+  },
+  "q6": {
+    "not_ready": [
+      {
+        "name": "worker-15",
+        "region": "eu-west-1",
+        "reason": "schema version 17 missing"
+      }
+    ]
+  },
+  "additional_reads": "Pytest abbreviated the dictionary diff but exposed the differing region. Reading tests/test_failure.py confirmed both literal dictionaries and revealed the integer conversion causing the invoice failure. Route files and deployments.json were read in full. A cached diff confirmed there were no additional staged settings changes. No gateway output required a truncation-recovery read."
+}

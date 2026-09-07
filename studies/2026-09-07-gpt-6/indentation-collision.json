@@ -1,0 +1,12 @@
+{
+  "indent_a": {
+    "native": "1:def allowed(x):\n2:    if x:\n3:        return True\n4:    return False\n",
+    "rtk": "1:def allowed(x):\n2:    if x:\n3:        return True\n4:    return False\n",
+    "allowed_false_result": false
+  },
+  "indent_b": {
+    "native": "1:def allowed(x):\n2:    if x:\n3:        return True\n4:        return False\n",
+    "rtk": "1:def allowed(x):\n2:    if x:\n3:        return True\n4:        return False\n",
+    "allowed_false_result": null
+  }
+}

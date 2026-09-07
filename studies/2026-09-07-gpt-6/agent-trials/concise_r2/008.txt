@@ -1,0 +1,16 @@
+{
+  "deployments": [
+    {
+      "name": "worker-00",
+      "region": "eu-west-1",
+      "ready": true
+    },
+    {
+      "name": "worker-01",
+      "region": "eu-west-1",
+      "ready": true
+    },
+    {
+      "name": "worker-02",
+      "region": "eu-west-1",
+      "ready": true

@@ -1,0 +1,62 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.14.6, pytest-9.1.1, pluggy-1.6.0 -- /workspace/rtk-experiment/work/venv/bin/python
+rootdir: /workspace/rtk-experiment/work/agents/rtk_r2
+configfile: pytest.ini
+collecting ... collected 2 items
+
+tests/test_failure.py::test_invoice_cents FAILED                         [ 50%]
+tests/test_failure.py::test_order_region FAILED                          [100%]
+
+=================================== FAILURES ===================================
+______________________________ test_invoice_cents ______________________________
+
+    def test_invoice_cents():
+>       assert invoice_total([10.75, 20.25]) == 31.0
+E       assert 30 == 31.0
+E        +  where 30 = invoice_total([10.75, 20.25])
+
+tests/test_failure.py:5: AssertionError
+______________________________ test_order_region _______________________________
+
+    def test_order_region():
+        actual = {"order_id": "ORD-7721", "region": "us-east-1", "state": "ready"}
+        expected = {"order_id": "ORD-7721", "region": "eu-west-1", "state": "ready"}
+>       assert actual == expected
+E       AssertionError: assert {'order_id': 'ORD-7721', 'region': 'us-east-1', 'state': 'ready'} == {'order_id': 'ORD-7721', 'region': 'eu-west-1', 'state': 'ready'}
+E         
+E         Common items:
+E         {'order_id': 'ORD-7721', 'state': 'ready'}
+E         Differing items:
+E         {'region': 'us-east-1'} != {'region': 'eu-west-1'}
+E         
+E         Full diff:
+E           {
+E               'order_id': 'ORD-7721',
+E         -     'region': 'eu-west-1',
+E         ?                 ^^^^
+E         +     'region': 'us-east-1',
+E         ?                +++ ^
+E               'state': 'ready',
+E           }
+
+tests/test_failure.py:10: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_failure.py::test_invoice_cents - assert 30 == 31.0
+ +  where 30 = invoice_total([10.75, 20.25])
+FAILED tests/test_failure.py::test_order_region - AssertionError: assert {'order_id': 'ORD-7721', 'region': 'us-east-1', 'state': 'ready'} == {'order_id': 'ORD-7721', 'region': 'eu-west-1', 'state': 'ready'}
+  
+  Common items:
+  {'order_id': 'ORD-7721', 'state': 'ready'}
+  Differing items:
+  {'region': 'us-east-1'} != {'region': 'eu-west-1'}
+  
+  Full diff:
+    {
+        'order_id': 'ORD-7721',
+  -     'region': 'eu-west-1',
+  ?                 ^^^^
+  +     'region': 'us-east-1',
+  ?                +++ ^
+        'state': 'ready',
+    }
+============================== 2 failed in 0.01s ===============================

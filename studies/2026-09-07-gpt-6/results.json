@@ -1,0 +1,2934 @@
+[
+  {
+    "id": "cargo_pass",
+    "task": "Did the 100 selected tests pass?",
+    "group": "routine",
+    "cwd": "fixture/rust",
+    "commands": {
+      "native": "cargo test --offline check_",
+      "rtk": "rtk cargo test --offline check_",
+      "concise": "cargo test --offline -q check_"
+    },
+    "evidence_probes": [
+      "100 passed"
+    ],
+    "expected_exit": 0,
+    "arms": {
+      "native": {
+        "returncode": 0,
+        "bytes": 3183,
+        "rtk_estimate": 796,
+        "tokens": {
+          "o200k_base": 994,
+          "cl100k_base": 991
+        },
+        "command_tokens": {
+          "o200k_base": 6,
+          "cl100k_base": 6
+        },
+        "sha256": "b39345e7e9da1bbe9fe9bb93e312fea76b8d9e01859b06a689318b579ab919a9",
+        "elapsed_median_ms": 26.7822919995524,
+        "elapsed_samples_ms": [
+          30.255042016506195,
+          26.7822919995524,
+          27.88175002206117,
+          26.387749996501952,
+          25.181541976053268
+        ],
+        "token_samples_o200k": [
+          994,
+          994,
+          994,
+          994,
+          994
+        ],
+        "evidence": {
+          "100 passed": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 3183,
+        "published_tokens": {
+          "o200k_base": 994,
+          "cl100k_base": 991
+        }
+      },
+      "rtk": {
+        "returncode": 0,
+        "bytes": 56,
+        "rtk_estimate": 14,
+        "tokens": {
+          "o200k_base": 21,
+          "cl100k_base": 21
+        },
+        "command_tokens": {
+          "o200k_base": 8,
+          "cl100k_base": 8
+        },
+        "sha256": "61bbc64fe01befcdf4d27d36c57cae9e31ef1ca64f403b8d1d43c07483d00b34",
+        "elapsed_median_ms": 30.13087494764477,
+        "elapsed_samples_ms": [
+          552.945917006582,
+          30.13087494764477,
+          29.62725004181266,
+          36.8980829953216,
+          29.842874966561794
+        ],
+        "token_samples_o200k": [
+          21,
+          21,
+          21,
+          21,
+          21
+        ],
+        "evidence": {
+          "100 passed": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 56,
+        "published_tokens": {
+          "o200k_base": 21,
+          "cl100k_base": 21
+        }
+      },
+      "concise": {
+        "returncode": 0,
+        "bytes": 225,
+        "rtk_estimate": 57,
+        "tokens": {
+          "o200k_base": 50,
+          "cl100k_base": 51
+        },
+        "command_tokens": {
+          "o200k_base": 8,
+          "cl100k_base": 8
+        },
+        "sha256": "57d44a6610c9d0d4cbee1082da70b9e56470930cc3a884a48204e3c871bb3987",
+        "elapsed_median_ms": 25.730625027790666,
+        "elapsed_samples_ms": [
+          36.045958986505866,
+          27.861959009896964,
+          25.248040969017893,
+          25.185125006828457,
+          25.730625027790666
+        ],
+        "token_samples_o200k": [
+          50,
+          50,
+          50,
+          50,
+          50
+        ],
+        "evidence": {
+          "100 passed": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 225,
+        "published_tokens": {
+          "o200k_base": 50,
+          "cl100k_base": 51
+        }
+      }
+    }
+  },
+  {
+    "id": "cargo_fail",
+    "task": "Name the failing test and show the actual and expected values.",
+    "group": "routine",
+    "cwd": "fixture/rust",
+    "commands": {
+      "native": "cargo test --offline",
+      "rtk": "rtk cargo test --offline",
+      "concise": "cargo test --offline -q"
+    },
+    "evidence_probes": [
+      "failing_sum",
+      "left: 4",
+      "right: 5"
+    ],
+    "expected_exit": 101,
+    "arms": {
+      "native": {
+        "returncode": 101,
+        "bytes": 3570,
+        "rtk_estimate": 893,
+        "tokens": {
+          "o200k_base": 1109,
+          "cl100k_base": 1104
+        },
+        "command_tokens": {
+          "o200k_base": 4,
+          "cl100k_base": 4
+        },
+        "sha256": "e3feba0c7a68b7469758765ee4bc00ac538633b193a3e944cbf424a30b5a48c7",
+        "elapsed_median_ms": 25.097999954596162,
+        "elapsed_samples_ms": [
+          25.811832980252802,
+          27.790165971964598,
+          25.097999954596162,
+          23.77108298242092,
+          23.63141701789573
+        ],
+        "token_samples_o200k": [
+          1109,
+          1109,
+          1109,
+          1109,
+          1109
+        ],
+        "evidence": {
+          "failing_sum": true,
+          "left: 4": true,
+          "right: 5": true
+        },
+        "exit_samples": [
+          101,
+          101,
+          101,
+          101,
+          101
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 3570,
+        "published_tokens": {
+          "o200k_base": 1109,
+          "cl100k_base": 1104
+        }
+      },
+      "rtk": {
+        "returncode": 101,
+        "bytes": 422,
+        "rtk_estimate": 106,
+        "tokens": {
+          "o200k_base": 136,
+          "cl100k_base": 134
+        },
+        "command_tokens": {
+          "o200k_base": 6,
+          "cl100k_base": 6
+        },
+        "sha256": "8f0f43bbed8a97ce87960ad74bf59770afdf8bdda5f5d3176d19b9109a0e7b74",
+        "elapsed_median_ms": 29.370292031671852,
+        "elapsed_samples_ms": [
+          31.62204200634733,
+          29.70366697991267,
+          29.370292031671852,
+          27.854542015120387,
+          28.39291701093316
+        ],
+        "token_samples_o200k": [
+          136,
+          136,
+          136,
+          136,
+          136
+        ],
+        "evidence": {
+          "failing_sum": true,
+          "left: 4": true,
+          "right: 5": true
+        },
+        "exit_samples": [
+          101,
+          101,
+          101,
+          101,
+          101
+        ],
+        "mentions_recovery": true,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 422,
+        "published_tokens": {
+          "o200k_base": 136,
+          "cl100k_base": 134
+        }
+      },
+      "concise": {
+        "returncode": 101,
+        "bytes": 616,
+        "rtk_estimate": 154,
+        "tokens": {
+          "o200k_base": 169,
+          "cl100k_base": 167
+        },
+        "command_tokens": {
+          "o200k_base": 6,
+          "cl100k_base": 6
+        },
+        "sha256": "b60f8b865028e10a11e09d9fc9cb5d4dfaa8c49db4bae2710c6a5db672f4e71f",
+        "elapsed_median_ms": 23.994790972210467,
+        "elapsed_samples_ms": [
+          26.55962499557063,
+          25.959666003473103,
+          23.994790972210467,
+          23.79683399340138,
+          23.889333999250084
+        ],
+        "token_samples_o200k": [
+          169,
+          169,
+          169,
+          169,
+          169
+        ],
+        "evidence": {
+          "failing_sum": true,
+          "left: 4": true,
+          "right: 5": true
+        },
+        "exit_samples": [
+          101,
+          101,
+          101,
+          101,
+          101
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 616,
+        "published_tokens": {
+          "o200k_base": 169,
+          "cl100k_base": 167
+        }
+      }
+    }
+  },
+  {
+    "id": "pytest_pass",
+    "task": "Did all 160 parametrized tests pass?",
+    "group": "routine",
+    "cwd": "fixture",
+    "commands": {
+      "native": "pytest tests/test_pass.py",
+      "rtk": "rtk pytest tests/test_pass.py",
+      "concise": "pytest -q tests/test_pass.py"
+    },
+    "evidence_probes": [
+      "160 passed"
+    ],
+    "expected_exit": 0,
+    "arms": {
+      "native": {
+        "returncode": 0,
+        "bytes": 591,
+        "rtk_estimate": 148,
+        "tokens": {
+          "o200k_base": 122,
+          "cl100k_base": 120
+        },
+        "command_tokens": {
+          "o200k_base": 5,
+          "cl100k_base": 5
+        },
+        "sha256": "27f7c31c89d777b764cfb8f4e2bda4ce7be1ef6397fd04583d1289572b0100e3",
+        "elapsed_median_ms": 125.56387495715171,
+        "elapsed_samples_ms": [
+          120.34770799800754,
+          145.9062080248259,
+          135.2124169934541,
+          125.56387495715171,
+          116.95133399916813
+        ],
+        "token_samples_o200k": [
+          122,
+          122,
+          122,
+          122,
+          122
+        ],
+        "evidence": {
+          "160 passed": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 556,
+        "published_tokens": {
+          "o200k_base": 103,
+          "cl100k_base": 101
+        }
+      },
+      "rtk": {
+        "returncode": 0,
+        "bytes": 19,
+        "rtk_estimate": 5,
+        "tokens": {
+          "o200k_base": 7,
+          "cl100k_base": 7
+        },
+        "command_tokens": {
+          "o200k_base": 7,
+          "cl100k_base": 7
+        },
+        "sha256": "7414d038bd491401ff4a74a70f7df549c38a2a44f697e850f71213776e30c215",
+        "elapsed_median_ms": 126.90916698193178,
+        "elapsed_samples_ms": [
+          147.62837497983128,
+          126.90916698193178,
+          129.45300003048033,
+          126.43491599010304,
+          121.81654101004824
+        ],
+        "token_samples_o200k": [
+          7,
+          7,
+          7,
+          7,
+          7
+        ],
+        "evidence": {
+          "160 passed": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 19,
+        "published_tokens": {
+          "o200k_base": 7,
+          "cl100k_base": 7
+        }
+      },
+      "concise": {
+        "returncode": 0,
+        "bytes": 260,
+        "rtk_estimate": 65,
+        "tokens": {
+          "o200k_base": 29,
+          "cl100k_base": 29
+        },
+        "command_tokens": {
+          "o200k_base": 7,
+          "cl100k_base": 7
+        },
+        "sha256": "9c1c1e5d9768fa0ba482b83ba2bc34b4e0762f2019a5a8b5494ad39c67f97b41",
+        "elapsed_median_ms": 123.37904196465388,
+        "elapsed_samples_ms": [
+          115.99245900288224,
+          135.7957079890184,
+          123.37904196465388,
+          126.14079198101535,
+          120.96554198069498
+        ],
+        "token_samples_o200k": [
+          29,
+          29,
+          29,
+          29,
+          29
+        ],
+        "evidence": {
+          "160 passed": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 260,
+        "published_tokens": {
+          "o200k_base": 29,
+          "cl100k_base": 29
+        }
+      }
+    }
+  },
+  {
+    "id": "pytest_fail",
+    "task": "Diagnose both failed assertions.",
+    "group": "routine",
+    "cwd": "fixture",
+    "commands": {
+      "native": "pytest tests/test_failure.py",
+      "rtk": "rtk pytest tests/test_failure.py",
+      "concise": "pytest -q --tb=short tests/test_failure.py"
+    },
+    "evidence_probes": [
+      "test_invoice_cents",
+      "test_order_region",
+      "eu-west-1",
+      "31.0"
+    ],
+    "expected_exit": 1,
+    "arms": {
+      "native": {
+        "returncode": 1,
+        "bytes": 1664,
+        "rtk_estimate": 416,
+        "tokens": {
+          "o200k_base": 405,
+          "cl100k_base": 401
+        },
+        "command_tokens": {
+          "o200k_base": 5,
+          "cl100k_base": 5
+        },
+        "sha256": "55c203503b5669ec3c7384ebc39fafcc12797edf1d4f1507e4e73b6cc3b458c2",
+        "elapsed_median_ms": 104.19595899293199,
+        "elapsed_samples_ms": [
+          101.08704201411456,
+          101.13683302188292,
+          105.89104099199176,
+          104.19595899293199,
+          137.5302500091493
+        ],
+        "token_samples_o200k": [
+          405,
+          405,
+          405,
+          405,
+          405
+        ],
+        "evidence": {
+          "test_invoice_cents": true,
+          "test_order_region": true,
+          "eu-west-1": true,
+          "31.0": true
+        },
+        "exit_samples": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 1629,
+        "published_tokens": {
+          "o200k_base": 386,
+          "cl100k_base": 382
+        }
+      },
+      "rtk": {
+        "returncode": 1,
+        "bytes": 463,
+        "rtk_estimate": 116,
+        "tokens": {
+          "o200k_base": 146,
+          "cl100k_base": 146
+        },
+        "command_tokens": {
+          "o200k_base": 7,
+          "cl100k_base": 7
+        },
+        "sha256": "32df090f59c944f2f8ba46708bd1647983f14c0dcb2ab8ec84194f49215b26e5",
+        "elapsed_median_ms": 103.95158297615126,
+        "elapsed_samples_ms": [
+          99.3831250234507,
+          102.63566602952778,
+          112.1404169825837,
+          103.95158297615126,
+          220.12858395464718
+        ],
+        "token_samples_o200k": [
+          146,
+          146,
+          146,
+          146,
+          146
+        ],
+        "evidence": {
+          "test_invoice_cents": true,
+          "test_order_region": true,
+          "eu-west-1": false,
+          "31.0": true
+        },
+        "exit_samples": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "mentions_recovery": true,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 463,
+        "published_tokens": {
+          "o200k_base": 146,
+          "cl100k_base": 146
+        }
+      },
+      "concise": {
+        "returncode": 1,
+        "bytes": 1075,
+        "rtk_estimate": 269,
+        "tokens": {
+          "o200k_base": 249,
+          "cl100k_base": 248
+        },
+        "command_tokens": {
+          "o200k_base": 11,
+          "cl100k_base": 11
+        },
+        "sha256": "9792f2f706bef1325b6beb9fb4b37c37be5862d6a1b15e871d02d061bf1da565",
+        "elapsed_median_ms": 108.4333750186488,
+        "elapsed_samples_ms": [
+          95.10458301519975,
+          99.61799997836351,
+          108.4333750186488,
+          126.10687501728535,
+          112.2846250073053
+        ],
+        "token_samples_o200k": [
+          249,
+          249,
+          249,
+          249,
+          249
+        ],
+        "evidence": {
+          "test_invoice_cents": true,
+          "test_order_region": true,
+          "eu-west-1": true,
+          "31.0": true
+        },
+        "exit_samples": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 1075,
+        "published_tokens": {
+          "o200k_base": 249,
+          "cl100k_base": 248
+        }
+      }
+    }
+  },
+  {
+    "id": "pytest_warning",
+    "task": "Identify any migration warning, deadline and replacement.",
+    "group": "routine",
+    "cwd": "fixture",
+    "commands": {
+      "native": "pytest tests/test_legacy.py",
+      "rtk": "rtk pytest tests/test_legacy.py",
+      "concise": "pytest -q tests/test_legacy.py"
+    },
+    "evidence_probes": [
+      "LEGACY_ADAPTER_DEADLINE",
+      "3.2",
+      "adapter_v2"
+    ],
+    "expected_exit": 0,
+    "arms": {
+      "native": {
+        "returncode": 0,
+        "bytes": 949,
+        "rtk_estimate": 238,
+        "tokens": {
+          "o200k_base": 248,
+          "cl100k_base": 238
+        },
+        "command_tokens": {
+          "o200k_base": 6,
+          "cl100k_base": 5
+        },
+        "sha256": "7d62eb113a3566b38f176ad552e5c7e90fdfde1cbedcfc24814f9a372dd1c059",
+        "elapsed_median_ms": 92.69162500277162,
+        "elapsed_samples_ms": [
+          92.69162500277162,
+          89.6142499987036,
+          105.83945800317451,
+          99.58987502614036,
+          89.6732909604907
+        ],
+        "token_samples_o200k": [
+          248,
+          248,
+          248,
+          248,
+          248
+        ],
+        "evidence": {
+          "LEGACY_ADAPTER_DEADLINE": true,
+          "3.2": true,
+          "adapter_v2": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 879,
+        "published_tokens": {
+          "o200k_base": 210,
+          "cl100k_base": 200
+        }
+      },
+      "rtk": {
+        "returncode": 0,
+        "bytes": 17,
+        "rtk_estimate": 5,
+        "tokens": {
+          "o200k_base": 7,
+          "cl100k_base": 7
+        },
+        "command_tokens": {
+          "o200k_base": 8,
+          "cl100k_base": 7
+        },
+        "sha256": "a794a8c0aa43b999d30884b1346c02ef46da946932b53b7cd19ebe64f881f3ef",
+        "elapsed_median_ms": 96.71112499199808,
+        "elapsed_samples_ms": [
+          96.71112499199808,
+          96.16070799529552,
+          113.9111669617705,
+          101.47741698892787,
+          94.00916699087247
+        ],
+        "token_samples_o200k": [
+          7,
+          7,
+          7,
+          7,
+          7
+        ],
+        "evidence": {
+          "LEGACY_ADAPTER_DEADLINE": false,
+          "3.2": false,
+          "adapter_v2": false
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 17,
+        "published_tokens": {
+          "o200k_base": 7,
+          "cl100k_base": 7
+        }
+      },
+      "concise": {
+        "returncode": 0,
+        "bytes": 630,
+        "rtk_estimate": 158,
+        "tokens": {
+          "o200k_base": 156,
+          "cl100k_base": 149
+        },
+        "command_tokens": {
+          "o200k_base": 8,
+          "cl100k_base": 7
+        },
+        "sha256": "571efb66115076bcfe0aa83aad3aeb17a5f0e195bd3a1a66152fae1e077d6d52",
+        "elapsed_median_ms": 92.98704197863117,
+        "elapsed_samples_ms": [
+          100.80374998506159,
+          93.68712495779619,
+          88.67224998539314,
+          92.98704197863117,
+          92.67795900814235
+        ],
+        "token_samples_o200k": [
+          156,
+          156,
+          156,
+          156,
+          156
+        ],
+        "evidence": {
+          "LEGACY_ADAPTER_DEADLINE": true,
+          "3.2": true,
+          "adapter_v2": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 595,
+        "published_tokens": {
+          "o200k_base": 137,
+          "cl100k_base": 130
+        }
+      }
+    }
+  },
+  {
+    "id": "pytest_skip",
+    "task": "Why was the integration test skipped?",
+    "group": "routine",
+    "cwd": "fixture",
+    "commands": {
+      "native": "pytest -rs tests/test_skipped.py",
+      "rtk": "rtk pytest -rs tests/test_skipped.py",
+      "concise": "pytest -q -rs tests/test_skipped.py"
+    },
+    "evidence_probes": [
+      "INTEGRATION_BLOCKER",
+      "schema 17"
+    ],
+    "expected_exit": 0,
+    "arms": {
+      "native": {
+        "returncode": 0,
+        "bytes": 606,
+        "rtk_estimate": 152,
+        "tokens": {
+          "o200k_base": 144,
+          "cl100k_base": 141
+        },
+        "command_tokens": {
+          "o200k_base": 8,
+          "cl100k_base": 8
+        },
+        "sha256": "e1429891edf0e5d4d6f6601a3c9ade51ac65411cefdba666c4fafea102b2d592",
+        "elapsed_median_ms": 90.49583395244554,
+        "elapsed_samples_ms": [
+          90.49583395244554,
+          89.92812497308478,
+          90.74891696218401,
+          89.96583399130031,
+          90.56554100243375
+        ],
+        "token_samples_o200k": [
+          144,
+          144,
+          144,
+          144,
+          144
+        ],
+        "evidence": {
+          "INTEGRATION_BLOCKER": true,
+          "schema 17": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 571,
+        "published_tokens": {
+          "o200k_base": 125,
+          "cl100k_base": 122
+        }
+      },
+      "rtk": {
+        "returncode": 0,
+        "bytes": 38,
+        "rtk_estimate": 10,
+        "tokens": {
+          "o200k_base": 15,
+          "cl100k_base": 15
+        },
+        "command_tokens": {
+          "o200k_base": 10,
+          "cl100k_base": 10
+        },
+        "sha256": "787adec40aaf89cb1d9c1f0405a58ebb5e08586a8700874f7f2711887762ee25",
+        "elapsed_median_ms": 95.1791669940576,
+        "elapsed_samples_ms": [
+          96.81575000286102,
+          95.1791669940576,
+          93.53437495883554,
+          94.26337503828108,
+          96.03533399058506
+        ],
+        "token_samples_o200k": [
+          15,
+          15,
+          15,
+          15,
+          15
+        ],
+        "evidence": {
+          "INTEGRATION_BLOCKER": false,
+          "schema 17": false
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 38,
+        "published_tokens": {
+          "o200k_base": 15,
+          "cl100k_base": 15
+        }
+      },
+      "concise": {
+        "returncode": 0,
+        "bytes": 277,
+        "rtk_estimate": 70,
+        "tokens": {
+          "o200k_base": 52,
+          "cl100k_base": 51
+        },
+        "command_tokens": {
+          "o200k_base": 10,
+          "cl100k_base": 10
+        },
+        "sha256": "25faeef9bf546dfae22f23e0164f36a5767f15eb01cbdc529442276dc813f8a6",
+        "elapsed_median_ms": 89.77041702019051,
+        "elapsed_samples_ms": [
+          87.95916702365503,
+          89.06508301151916,
+          89.77041702019051,
+          90.62512498348951,
+          90.16379102831706
+        ],
+        "token_samples_o200k": [
+          52,
+          52,
+          52,
+          52,
+          52
+        ],
+        "evidence": {
+          "INTEGRATION_BLOCKER": true,
+          "schema 17": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 277,
+        "published_tokens": {
+          "o200k_base": 52,
+          "cl100k_base": 51
+        }
+      }
+    }
+  },
+  {
+    "id": "git_status",
+    "task": "Identify changed files and staged/unstaged state.",
+    "group": "routine",
+    "cwd": "fixture",
+    "commands": {
+      "native": "git status",
+      "rtk": "rtk git status",
+      "concise": "git status --short"
+    },
+    "evidence_probes": [
+      "mixed.txt",
+      "staged.txt",
+      "removed.txt",
+      "new.txt"
+    ],
+    "expected_exit": 0,
+    "arms": {
+      "native": {
+        "returncode": 0,
+        "bytes": 554,
+        "rtk_estimate": 139,
+        "tokens": {
+          "o200k_base": 156,
+          "cl100k_base": 156
+        },
+        "command_tokens": {
+          "o200k_base": 2,
+          "cl100k_base": 2
+        },
+        "sha256": "fe3ab6db4860aac8ef9a976f26be696d2461f914fa7b8b6fd0556c295c0d0b7d",
+        "elapsed_median_ms": 15.74504200834781,
+        "elapsed_samples_ms": [
+          18.53895903332159,
+          16.27845800248906,
+          15.544374997261912,
+          15.55320800980553,
+          15.74504200834781
+        ],
+        "token_samples_o200k": [
+          156,
+          156,
+          156,
+          156,
+          156
+        ],
+        "evidence": {
+          "mixed.txt": true,
+          "staged.txt": true,
+          "removed.txt": true,
+          "new.txt": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 554,
+        "published_tokens": {
+          "o200k_base": 156,
+          "cl100k_base": 156
+        }
+      },
+      "rtk": {
+        "returncode": 0,
+        "bytes": 152,
+        "rtk_estimate": 38,
+        "tokens": {
+          "o200k_base": 49,
+          "cl100k_base": 49
+        },
+        "command_tokens": {
+          "o200k_base": 4,
+          "cl100k_base": 4
+        },
+        "sha256": "3323966c62e5a5f04afa881dc94e2d226fc686e7cb7d5ad99b3d9372102c3e1b",
+        "elapsed_median_ms": 28.20033300668001,
+        "elapsed_samples_ms": [
+          28.20033300668001,
+          29.678207996767014,
+          28.295999974943697,
+          27.586290962062776,
+          28.11554097570479
+        ],
+        "token_samples_o200k": [
+          49,
+          49,
+          49,
+          49,
+          49
+        ],
+        "evidence": {
+          "mixed.txt": true,
+          "staged.txt": true,
+          "removed.txt": true,
+          "new.txt": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 152,
+        "published_tokens": {
+          "o200k_base": 49,
+          "cl100k_base": 49
+        }
+      },
+      "concise": {
+        "returncode": 0,
+        "bytes": 130,
+        "rtk_estimate": 33,
+        "tokens": {
+          "o200k_base": 41,
+          "cl100k_base": 41
+        },
+        "command_tokens": {
+          "o200k_base": 4,
+          "cl100k_base": 4
+        },
+        "sha256": "8d2d0ce76b9304ef9b2a3be24ace2bcb626c8417f491bac20aca3954846bc710",
+        "elapsed_median_ms": 16.025958000682294,
+        "elapsed_samples_ms": [
+          16.16016699699685,
+          16.339167021214962,
+          16.025958000682294,
+          15.480957983527333,
+          15.07191697601229
+        ],
+        "token_samples_o200k": [
+          41,
+          41,
+          41,
+          41,
+          41
+        ],
+        "evidence": {
+          "mixed.txt": true,
+          "staged.txt": true,
+          "removed.txt": true,
+          "new.txt": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 130,
+        "published_tokens": {
+          "o200k_base": 41,
+          "cl100k_base": 41
+        }
+      }
+    }
+  },
+  {
+    "id": "git_diff_small",
+    "task": "Review the changed consent branch.",
+    "group": "routine",
+    "cwd": "fixture",
+    "commands": {
+      "native": "git diff -- policy.py",
+      "rtk": "rtk git diff -- policy.py",
+      "concise": "git diff -U1 -- policy.py"
+    },
+    "evidence_probes": [
+      "if not verified",
+      "+        return True"
+    ],
+    "expected_exit": 0,
+    "arms": {
+      "native": {
+        "returncode": 0,
+        "bytes": 285,
+        "rtk_estimate": 72,
+        "tokens": {
+          "o200k_base": 87,
+          "cl100k_base": 87
+        },
+        "command_tokens": {
+          "o200k_base": 5,
+          "cl100k_base": 5
+        },
+        "sha256": "76f67887a02e8bfb788ca5968144bc17086a473bb9b5fa336af40a2b5385a376",
+        "elapsed_median_ms": 14.839707990176976,
+        "elapsed_samples_ms": [
+          14.980083040427417,
+          14.57299996400252,
+          14.839707990176976,
+          15.018415986560285,
+          14.259458985179663
+        ],
+        "token_samples_o200k": [
+          87,
+          87,
+          87,
+          87,
+          87
+        ],
+        "evidence": {
+          "if not verified": true,
+          "+        return True": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 285,
+        "published_tokens": {
+          "o200k_base": 87,
+          "cl100k_base": 87
+        }
+      },
+      "rtk": {
+        "returncode": 0,
+        "bytes": 281,
+        "rtk_estimate": 71,
+        "tokens": {
+          "o200k_base": 81,
+          "cl100k_base": 81
+        },
+        "command_tokens": {
+          "o200k_base": 7,
+          "cl100k_base": 7
+        },
+        "sha256": "507ea9ae447c72c9c47aa354be97ef2e6d58b9490f7c0c68373588ff7fd415ca",
+        "elapsed_median_ms": 27.241709001827985,
+        "elapsed_samples_ms": [
+          28.28316600061953,
+          26.180499990005046,
+          27.72100002039224,
+          27.241709001827985,
+          25.930667005013674
+        ],
+        "token_samples_o200k": [
+          81,
+          81,
+          81,
+          81,
+          81
+        ],
+        "evidence": {
+          "if not verified": true,
+          "+        return True": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 281,
+        "published_tokens": {
+          "o200k_base": 81,
+          "cl100k_base": 81
+        }
+      },
+      "concise": {
+        "returncode": 0,
+        "bytes": 235,
+        "rtk_estimate": 59,
+        "tokens": {
+          "o200k_base": 76,
+          "cl100k_base": 76
+        },
+        "command_tokens": {
+          "o200k_base": 8,
+          "cl100k_base": 8
+        },
+        "sha256": "67b2bb21ce9e56999e06f5675c5b161bd95deebf1b9cc126b04edb784e55be40",
+        "elapsed_median_ms": 14.950333978049457,
+        "elapsed_samples_ms": [
+          15.171291015576571,
+          14.950333978049457,
+          15.666958002839237,
+          14.764457999262959,
+          14.604167023207992
+        ],
+        "token_samples_o200k": [
+          76,
+          76,
+          76,
+          76,
+          76
+        ],
+        "evidence": {
+          "if not verified": true,
+          "+        return True": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 235,
+        "published_tokens": {
+          "o200k_base": 76,
+          "cl100k_base": 76
+        }
+      }
+    }
+  },
+  {
+    "id": "git_diff_large",
+    "task": "Identify all changed boolean settings.",
+    "group": "boundary",
+    "cwd": "fixture",
+    "commands": {
+      "native": "git diff -- settings.py",
+      "rtk": "rtk git diff -- settings.py",
+      "concise": "git diff -U0 -- settings.py | rg '^[+-][A-Z_]+ = (True|False)'"
+    },
+    "evidence_probes": [
+      "-REQUIRE_VERIFIED_CONSENT = True",
+      "+REQUIRE_VERIFIED_CONSENT = False"
+    ],
+    "expected_exit": 0,
+    "arms": {
+      "native": {
+        "returncode": 0,
+        "bytes": 3771,
+        "rtk_estimate": 943,
+        "tokens": {
+          "o200k_base": 1868,
+          "cl100k_base": 1865
+        },
+        "command_tokens": {
+          "o200k_base": 5,
+          "cl100k_base": 5
+        },
+        "sha256": "42ec8ad0173d2d186561964053ec4ca96c18a1d95b65f5f8eded003f43d2e34c",
+        "elapsed_median_ms": 15.159000002313405,
+        "elapsed_samples_ms": [
+          14.959625026676804,
+          14.774875016883016,
+          15.159000002313405,
+          15.205707983113825,
+          15.566041984129697
+        ],
+        "token_samples_o200k": [
+          1868,
+          1868,
+          1868,
+          1868,
+          1868
+        ],
+        "evidence": {
+          "-REQUIRE_VERIFIED_CONSENT = True": true,
+          "+REQUIRE_VERIFIED_CONSENT = False": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 3771,
+        "published_tokens": {
+          "o200k_base": 1868,
+          "cl100k_base": 1865
+        }
+      },
+      "rtk": {
+        "returncode": 0,
+        "bytes": 2245,
+        "rtk_estimate": 562,
+        "tokens": {
+          "o200k_base": 1072,
+          "cl100k_base": 1070
+        },
+        "command_tokens": {
+          "o200k_base": 7,
+          "cl100k_base": 7
+        },
+        "sha256": "102dcda2e5d80738427431de6d02ab399dd5b04971afa64ba6f9e7e59078a9ca",
+        "elapsed_median_ms": 27.2727920091711,
+        "elapsed_samples_ms": [
+          27.2727920091711,
+          26.263208012096584,
+          26.655209017917514,
+          28.279958991333842,
+          27.704374981112778
+        ],
+        "token_samples_o200k": [
+          1072,
+          1072,
+          1072,
+          1072,
+          1072
+        ],
+        "evidence": {
+          "-REQUIRE_VERIFIED_CONSENT = True": true,
+          "+REQUIRE_VERIFIED_CONSENT = False": false
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 2245,
+        "published_tokens": {
+          "o200k_base": 1072,
+          "cl100k_base": 1070
+        }
+      },
+      "concise": {
+        "returncode": 0,
+        "bytes": 67,
+        "rtk_estimate": 17,
+        "tokens": {
+          "o200k_base": 22,
+          "cl100k_base": 20
+        },
+        "command_tokens": {
+          "o200k_base": 24,
+          "cl100k_base": 24
+        },
+        "sha256": "1cf1f3fa3351f642d4c4ec0bb96a3cad0409f650e9d5b1bbdbcd6ca022eb0905",
+        "elapsed_median_ms": 16.46950002759695,
+        "elapsed_samples_ms": [
+          16.701417043805122,
+          15.836999984458089,
+          16.00429101381451,
+          16.57600002363324,
+          16.46950002759695
+        ],
+        "token_samples_o200k": [
+          22,
+          22,
+          22,
+          22,
+          22
+        ],
+        "evidence": {
+          "-REQUIRE_VERIFIED_CONSENT = True": true,
+          "+REQUIRE_VERIFIED_CONSENT = False": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 67,
+        "published_tokens": {
+          "o200k_base": 22,
+          "cl100k_base": 20
+        }
+      }
+    }
+  },
+  {
+    "id": "git_log_body",
+    "task": "What are the latest commit deployment and rollback requirements?",
+    "group": "routine",
+    "cwd": "fixture",
+    "commands": {
+      "native": "git log -1",
+      "rtk": "rtk git log -1",
+      "concise": "git log -1 --format=%B"
+    },
+    "evidence_probes": [
+      "DEPLOYMENT_PRECONDITION",
+      "schema must be 17",
+      "snap-2026-08-31"
+    ],
+    "expected_exit": 0,
+    "arms": {
+      "native": {
+        "returncode": 0,
+        "bytes": 359,
+        "rtk_estimate": 90,
+        "tokens": {
+          "o200k_base": 105,
+          "cl100k_base": 103
+        },
+        "command_tokens": {
+          "o200k_base": 4,
+          "cl100k_base": 4
+        },
+        "sha256": "fdb6e233d0baa46336865473dca909dc413c2aff4b4e5e168ed5b4fd996b000b",
+        "elapsed_median_ms": 15.307041991036385,
+        "elapsed_samples_ms": [
+          15.307041991036385,
+          15.461041999515146,
+          15.116041002329439,
+          15.372958034276962,
+          15.129374980460852
+        ],
+        "token_samples_o200k": [
+          105,
+          105,
+          105,
+          105,
+          105
+        ],
+        "evidence": {
+          "DEPLOYMENT_PRECONDITION": true,
+          "schema must be 17": true,
+          "snap-2026-08-31": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 359,
+        "published_tokens": {
+          "o200k_base": 105,
+          "cl100k_base": 103
+        }
+      },
+      "rtk": {
+        "returncode": 0,
+        "bytes": 238,
+        "rtk_estimate": 60,
+        "tokens": {
+          "o200k_base": 63,
+          "cl100k_base": 61
+        },
+        "command_tokens": {
+          "o200k_base": 6,
+          "cl100k_base": 6
+        },
+        "sha256": "f46bb11cf091e2d7af1c7e352b09d447ee92bccee3e2ce9fdde9d4db0ef21f90",
+        "elapsed_median_ms": 18.503750034142286,
+        "elapsed_samples_ms": [
+          18.977625004481524,
+          18.19629198871553,
+          18.647707998752594,
+          18.503750034142286,
+          18.423875037115067
+        ],
+        "token_samples_o200k": [
+          63,
+          63,
+          63,
+          63,
+          63
+        ],
+        "evidence": {
+          "DEPLOYMENT_PRECONDITION": true,
+          "schema must be 17": true,
+          "snap-2026-08-31": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 238,
+        "published_tokens": {
+          "o200k_base": 63,
+          "cl100k_base": 61
+        }
+      },
+      "concise": {
+        "returncode": 0,
+        "bytes": 197,
+        "rtk_estimate": 50,
+        "tokens": {
+          "o200k_base": 45,
+          "cl100k_base": 44
+        },
+        "command_tokens": {
+          "o200k_base": 8,
+          "cl100k_base": 8
+        },
+        "sha256": "03fa3330ef3da94ad6f746b59876f61bb5bb45f71dbae8730d9c1ea7942c3724",
+        "elapsed_median_ms": 14.888750039972365,
+        "elapsed_samples_ms": [
+          15.154958004131913,
+          14.848541002720594,
+          15.100541990250349,
+          14.787000021897256,
+          14.888750039972365
+        ],
+        "token_samples_o200k": [
+          45,
+          45,
+          45,
+          45,
+          45
+        ],
+        "evidence": {
+          "DEPLOYMENT_PRECONDITION": true,
+          "schema must be 17": true,
+          "snap-2026-08-31": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 197,
+        "published_tokens": {
+          "o200k_base": 45,
+          "cl100k_base": 44
+        }
+      }
+    }
+  },
+  {
+    "id": "rg_many",
+    "task": "Who can access /admin/archive?",
+    "group": "boundary",
+    "cwd": "fixture",
+    "commands": {
+      "native": "rg -n allow_policy routes.py",
+      "rtk": "rtk rg -n allow_policy routes.py",
+      "concise": "rg -n /admin/archive routes.py"
+    },
+    "evidence_probes": [
+      "anonymous"
+    ],
+    "expected_exit": 0,
+    "arms": {
+      "native": {
+        "returncode": 0,
+        "bytes": 2206,
+        "rtk_estimate": 552,
+        "tokens": {
+          "o200k_base": 612,
+          "cl100k_base": 612
+        },
+        "command_tokens": {
+          "o200k_base": 7,
+          "cl100k_base": 7
+        },
+        "sha256": "f0330153984e12f8b4b2eabebe9c5d7a0cbadb588ea19d2a4d7669afe65b6ae6",
+        "elapsed_median_ms": 8.888790966011584,
+        "elapsed_samples_ms": [
+          9.07945801736787,
+          9.056499984581023,
+          8.825499971862882,
+          8.838957990519702,
+          8.888790966011584
+        ],
+        "token_samples_o200k": [
+          612,
+          612,
+          612,
+          612,
+          612
+        ],
+        "evidence": {
+          "anonymous": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 2206,
+        "published_tokens": {
+          "o200k_base": 612,
+          "cl100k_base": 612
+        }
+      },
+      "rtk": {
+        "returncode": 0,
+        "bytes": 1467,
+        "rtk_estimate": 367,
+        "tokens": {
+          "o200k_base": 419,
+          "cl100k_base": 419
+        },
+        "command_tokens": {
+          "o200k_base": 9,
+          "cl100k_base": 9
+        },
+        "sha256": "3e2aeaf5da5d894ea6fc6cc4c3d9b52fe9a8ad66fc4513d65c6941c3f4b5d651",
+        "elapsed_median_ms": 12.684791989158839,
+        "elapsed_samples_ms": [
+          12.958874984178692,
+          12.684791989158839,
+          12.872416991740465,
+          11.998874950222671,
+          12.192167050670832
+        ],
+        "token_samples_o200k": [
+          419,
+          419,
+          419,
+          419,
+          419
+        ],
+        "evidence": {
+          "anonymous": false
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": true,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 1467,
+        "published_tokens": {
+          "o200k_base": 419,
+          "cl100k_base": 419
+        }
+      },
+      "concise": {
+        "returncode": 0,
+        "bytes": 55,
+        "rtk_estimate": 14,
+        "tokens": {
+          "o200k_base": 12,
+          "cl100k_base": 12
+        },
+        "command_tokens": {
+          "o200k_base": 8,
+          "cl100k_base": 8
+        },
+        "sha256": "5184d736c564bb25311ff270befa276ab719b0df783c6a09b4c722dbc734b1ac",
+        "elapsed_median_ms": 8.756458992138505,
+        "elapsed_samples_ms": [
+          9.495083009824157,
+          8.688249974511564,
+          8.756458992138505,
+          8.154791954439133,
+          8.76487500499934
+        ],
+        "token_samples_o200k": [
+          12,
+          12,
+          12,
+          12,
+          12
+        ],
+        "evidence": {
+          "anonymous": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 55,
+        "published_tokens": {
+          "o200k_base": 12,
+          "cl100k_base": 12
+        }
+      }
+    }
+  },
+  {
+    "id": "rg_long",
+    "task": "Does /admin/export require authentication?",
+    "group": "boundary",
+    "cwd": "fixture",
+    "commands": {
+      "native": "rg -n /admin/export long_routes.py",
+      "rtk": "rtk rg -n /admin/export long_routes.py",
+      "concise": "rg -n -o 'requires_auth=[^)]+' long_routes.py"
+    },
+    "evidence_probes": [
+      "requires_auth=False"
+    ],
+    "expected_exit": 0,
+    "arms": {
+      "native": {
+        "returncode": 0,
+        "bytes": 917,
+        "rtk_estimate": 230,
+        "tokens": {
+          "o200k_base": 134,
+          "cl100k_base": 134
+        },
+        "command_tokens": {
+          "o200k_base": 9,
+          "cl100k_base": 9
+        },
+        "sha256": "91a2191317d299af447bb6207c2a7099ba19242afc78014526f68b048edb2e02",
+        "elapsed_median_ms": 8.581790956668556,
+        "elapsed_samples_ms": [
+          8.688292000442743,
+          8.299125009216368,
+          8.581790956668556,
+          8.479957992676646,
+          8.864208997692913
+        ],
+        "token_samples_o200k": [
+          134,
+          134,
+          134,
+          134,
+          134
+        ],
+        "evidence": {
+          "requires_auth=False": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 917,
+        "published_tokens": {
+          "o200k_base": 134,
+          "cl100k_base": 134
+        }
+      },
+      "rtk": {
+        "returncode": 0,
+        "bytes": 917,
+        "rtk_estimate": 230,
+        "tokens": {
+          "o200k_base": 134,
+          "cl100k_base": 134
+        },
+        "command_tokens": {
+          "o200k_base": 11,
+          "cl100k_base": 11
+        },
+        "sha256": "91a2191317d299af447bb6207c2a7099ba19242afc78014526f68b048edb2e02",
+        "elapsed_median_ms": 12.0855420245789,
+        "elapsed_samples_ms": [
+          12.605791969690472,
+          12.201957986690104,
+          12.0855420245789,
+          11.805541987996548,
+          11.944625002797693
+        ],
+        "token_samples_o200k": [
+          134,
+          134,
+          134,
+          134,
+          134
+        ],
+        "evidence": {
+          "requires_auth=False": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 917,
+        "published_tokens": {
+          "o200k_base": 134,
+          "cl100k_base": 134
+        }
+      },
+      "concise": {
+        "returncode": 0,
+        "bytes": 22,
+        "rtk_estimate": 6,
+        "tokens": {
+          "o200k_base": 6,
+          "cl100k_base": 6
+        },
+        "command_tokens": {
+          "o200k_base": 15,
+          "cl100k_base": 15
+        },
+        "sha256": "07f4843c30e7024e459c33f7780322f653eff815a54665a68fa4f4dd4ced8c6f",
+        "elapsed_median_ms": 8.436665986664593,
+        "elapsed_samples_ms": [
+          8.311500016134232,
+          8.365499961655587,
+          8.767457969952375,
+          8.436665986664593,
+          8.68558301590383
+        ],
+        "token_samples_o200k": [
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "evidence": {
+          "requires_auth=False": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 22,
+        "published_tokens": {
+          "o200k_base": 6,
+          "cl100k_base": 6
+        }
+      }
+    }
+  },
+  {
+    "id": "read_default",
+    "task": "Inspect the implementation and its retention covenant.",
+    "group": "routine",
+    "cwd": "fixture",
+    "commands": {
+      "native": "cat policy.py",
+      "rtk": "rtk read policy.py",
+      "concise": "cat policy.py"
+    },
+    "evidence_probes": [
+      "RC-17",
+      "if not verified",
+      "return True"
+    ],
+    "expected_exit": 0,
+    "arms": {
+      "native": {
+        "returncode": 0,
+        "bytes": 226,
+        "rtk_estimate": 57,
+        "tokens": {
+          "o200k_base": 48,
+          "cl100k_base": 48
+        },
+        "command_tokens": {
+          "o200k_base": 3,
+          "cl100k_base": 3
+        },
+        "sha256": "8c11eb0b95bd556dd196ff8f929fa91647b9aaef5980c56f4e3f1b223d7ff3a0",
+        "elapsed_median_ms": 7.080292038153857,
+        "elapsed_samples_ms": [
+          7.080292038153857,
+          7.01095798285678,
+          7.074917026329786,
+          7.302707992494106,
+          7.376958034001291
+        ],
+        "token_samples_o200k": [
+          48,
+          48,
+          48,
+          48,
+          48
+        ],
+        "evidence": {
+          "RC-17": true,
+          "if not verified": true,
+          "return True": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 226,
+        "published_tokens": {
+          "o200k_base": 48,
+          "cl100k_base": 48
+        }
+      },
+      "rtk": {
+        "returncode": 0,
+        "bytes": 226,
+        "rtk_estimate": 57,
+        "tokens": {
+          "o200k_base": 48,
+          "cl100k_base": 48
+        },
+        "command_tokens": {
+          "o200k_base": 5,
+          "cl100k_base": 5
+        },
+        "sha256": "8c11eb0b95bd556dd196ff8f929fa91647b9aaef5980c56f4e3f1b223d7ff3a0",
+        "elapsed_median_ms": 10.112416988704354,
+        "elapsed_samples_ms": [
+          9.782375011127442,
+          9.594707982614636,
+          10.112416988704354,
+          10.113292024470866,
+          10.247084021102637
+        ],
+        "token_samples_o200k": [
+          48,
+          48,
+          48,
+          48,
+          48
+        ],
+        "evidence": {
+          "RC-17": true,
+          "if not verified": true,
+          "return True": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 226,
+        "published_tokens": {
+          "o200k_base": 48,
+          "cl100k_base": 48
+        }
+      },
+      "concise": {
+        "returncode": 0,
+        "bytes": 226,
+        "rtk_estimate": 57,
+        "tokens": {
+          "o200k_base": 48,
+          "cl100k_base": 48
+        },
+        "command_tokens": {
+          "o200k_base": 3,
+          "cl100k_base": 3
+        },
+        "sha256": "8c11eb0b95bd556dd196ff8f929fa91647b9aaef5980c56f4e3f1b223d7ff3a0",
+        "elapsed_median_ms": 7.333125045988709,
+        "elapsed_samples_ms": [
+          7.8512500040233135,
+          6.930542003829032,
+          7.013958995230496,
+          7.470332959201187,
+          7.333125045988709
+        ],
+        "token_samples_o200k": [
+          48,
+          48,
+          48,
+          48,
+          48
+        ],
+        "evidence": {
+          "RC-17": true,
+          "if not verified": true,
+          "return True": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 226,
+        "published_tokens": {
+          "o200k_base": 48,
+          "cl100k_base": 48
+        }
+      }
+    }
+  },
+  {
+    "id": "read_minimal",
+    "task": "Inspect the implementation and its retention covenant.",
+    "group": "opt-in",
+    "cwd": "fixture",
+    "commands": {
+      "native": "cat policy.py",
+      "rtk": "rtk read -l minimal policy.py",
+      "concise": "cat policy.py"
+    },
+    "evidence_probes": [
+      "RC-17",
+      "if not verified",
+      "return True"
+    ],
+    "expected_exit": 0,
+    "arms": {
+      "native": {
+        "returncode": 0,
+        "bytes": 226,
+        "rtk_estimate": 57,
+        "tokens": {
+          "o200k_base": 48,
+          "cl100k_base": 48
+        },
+        "command_tokens": {
+          "o200k_base": 3,
+          "cl100k_base": 3
+        },
+        "sha256": "8c11eb0b95bd556dd196ff8f929fa91647b9aaef5980c56f4e3f1b223d7ff3a0",
+        "elapsed_median_ms": 7.093624968547374,
+        "elapsed_samples_ms": [
+          6.912790995556861,
+          7.093624968547374,
+          7.439500011969358,
+          7.165833027102053,
+          6.784332974348217
+        ],
+        "token_samples_o200k": [
+          48,
+          48,
+          48,
+          48,
+          48
+        ],
+        "evidence": {
+          "RC-17": true,
+          "if not verified": true,
+          "return True": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 226,
+        "published_tokens": {
+          "o200k_base": 48,
+          "cl100k_base": 48
+        }
+      },
+      "rtk": {
+        "returncode": 0,
+        "bytes": 144,
+        "rtk_estimate": 36,
+        "tokens": {
+          "o200k_base": 31,
+          "cl100k_base": 31
+        },
+        "command_tokens": {
+          "o200k_base": 8,
+          "cl100k_base": 8
+        },
+        "sha256": "5acc3a80ea555c6474ed22a14c4fe0d9ed73cdabc3572884baae6026377e7fe9",
+        "elapsed_median_ms": 9.734832972753793,
+        "elapsed_samples_ms": [
+          10.386375011876225,
+          9.94750001700595,
+          9.734832972753793,
+          9.527250018436462,
+          9.639125026296824
+        ],
+        "token_samples_o200k": [
+          31,
+          31,
+          31,
+          31,
+          31
+        ],
+        "evidence": {
+          "RC-17": false,
+          "if not verified": true,
+          "return True": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 144,
+        "published_tokens": {
+          "o200k_base": 31,
+          "cl100k_base": 31
+        }
+      },
+      "concise": {
+        "returncode": 0,
+        "bytes": 226,
+        "rtk_estimate": 57,
+        "tokens": {
+          "o200k_base": 48,
+          "cl100k_base": 48
+        },
+        "command_tokens": {
+          "o200k_base": 3,
+          "cl100k_base": 3
+        },
+        "sha256": "8c11eb0b95bd556dd196ff8f929fa91647b9aaef5980c56f4e3f1b223d7ff3a0",
+        "elapsed_median_ms": 7.063458033371717,
+        "elapsed_samples_ms": [
+          7.283749990165234,
+          7.42295803502202,
+          7.063458033371717,
+          6.979582947678864,
+          6.643083004746586
+        ],
+        "token_samples_o200k": [
+          48,
+          48,
+          48,
+          48,
+          48
+        ],
+        "evidence": {
+          "RC-17": true,
+          "if not verified": true,
+          "return True": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 226,
+        "published_tokens": {
+          "o200k_base": 48,
+          "cl100k_base": 48
+        }
+      }
+    }
+  },
+  {
+    "id": "json_array",
+    "task": "List every deployment that is not ready and its reason.",
+    "group": "boundary",
+    "cwd": "fixture",
+    "commands": {
+      "native": "cat deployments.json",
+      "rtk": "rtk json deployments.json",
+      "concise": "jq -c '.deployments[] | select(.ready == false) | {name, reason}' deployments.json"
+    },
+    "evidence_probes": [
+      "worker-15",
+      "schema version 17 missing"
+    ],
+    "expected_exit": 0,
+    "arms": {
+      "native": {
+        "returncode": 0,
+        "bytes": 1496,
+        "rtk_estimate": 374,
+        "tokens": {
+          "o200k_base": 485,
+          "cl100k_base": 485
+        },
+        "command_tokens": {
+          "o200k_base": 3,
+          "cl100k_base": 3
+        },
+        "sha256": "2423e2a169a2b89c376d116408f5fd207d764adae8d3132b14119c1ae309f4f1",
+        "elapsed_median_ms": 7.053999986965209,
+        "elapsed_samples_ms": [
+          7.053999986965209,
+          6.932292017154396,
+          7.097415975295007,
+          7.000875019002706,
+          7.399040972813964
+        ],
+        "token_samples_o200k": [
+          485,
+          485,
+          485,
+          485,
+          485
+        ],
+        "evidence": {
+          "worker-15": true,
+          "schema version 17 missing": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 1496,
+        "published_tokens": {
+          "o200k_base": 485,
+          "cl100k_base": 485
+        }
+      },
+      "rtk": {
+        "returncode": 0,
+        "bytes": 113,
+        "rtk_estimate": 29,
+        "tokens": {
+          "o200k_base": 36,
+          "cl100k_base": 36
+        },
+        "command_tokens": {
+          "o200k_base": 5,
+          "cl100k_base": 5
+        },
+        "sha256": "982587e91b3c49ebf395ff0a595154ccff55b6f568da7d0306ae7f6222772759",
+        "elapsed_median_ms": 9.978874993976206,
+        "elapsed_samples_ms": [
+          11.013750045094639,
+          9.654208028223366,
+          9.978874993976206,
+          9.625375038012862,
+          10.152207978535444
+        ],
+        "token_samples_o200k": [
+          36,
+          36,
+          36,
+          36,
+          36
+        ],
+        "evidence": {
+          "worker-15": false,
+          "schema version 17 missing": false
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 113,
+        "published_tokens": {
+          "o200k_base": 36,
+          "cl100k_base": 36
+        }
+      },
+      "concise": {
+        "returncode": 0,
+        "bytes": 58,
+        "rtk_estimate": 15,
+        "tokens": {
+          "o200k_base": 15,
+          "cl100k_base": 15
+        },
+        "command_tokens": {
+          "o200k_base": 22,
+          "cl100k_base": 22
+        },
+        "sha256": "a0d5657a5b5cee8da00eb4e3cc73e2c0b7684ef78df55fa08bee983ec5afa09c",
+        "elapsed_median_ms": 7.770582975354046,
+        "elapsed_samples_ms": [
+          8.270499994978309,
+          7.669667014852166,
+          8.622540975920856,
+          7.759374973829836,
+          7.770582975354046
+        ],
+        "token_samples_o200k": [
+          15,
+          15,
+          15,
+          15,
+          15
+        ],
+        "evidence": {
+          "worker-15": true,
+          "schema version 17 missing": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 58,
+        "published_tokens": {
+          "o200k_base": 15,
+          "cl100k_base": 15
+        }
+      }
+    }
+  },
+  {
+    "id": "log_ids",
+    "task": "Which request failed last, and did failover follow it?",
+    "group": "boundary",
+    "cwd": "fixture",
+    "commands": {
+      "native": "cat events.log",
+      "rtk": "rtk log events.log",
+      "concise": "rg 'ERROR|failover' events.log"
+    },
+    "evidence_probes": [
+      "9002",
+      "12:01:05",
+      "failover complete"
+    ],
+    "expected_exit": 0,
+    "arms": {
+      "native": {
+        "returncode": 0,
+        "bytes": 1515,
+        "rtk_estimate": 379,
+        "tokens": {
+          "o200k_base": 573,
+          "cl100k_base": 573
+        },
+        "command_tokens": {
+          "o200k_base": 3,
+          "cl100k_base": 3
+        },
+        "sha256": "bcd96e0d5fcbc7ab87116f4102e83593838cac169426891122807cb8759f3e8b",
+        "elapsed_median_ms": 7.550000038463622,
+        "elapsed_samples_ms": [
+          7.3756250203587115,
+          7.211624993942678,
+          7.550000038463622,
+          7.604209007695317,
+          7.737916021142155
+        ],
+        "token_samples_o200k": [
+          573,
+          573,
+          573,
+          573,
+          573
+        ],
+        "evidence": {
+          "9002": true,
+          "12:01:05": true,
+          "failover complete": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 1515,
+        "published_tokens": {
+          "o200k_base": 573,
+          "cl100k_base": 573
+        }
+      },
+      "rtk": {
+        "returncode": 0,
+        "bytes": 183,
+        "rtk_estimate": 46,
+        "tokens": {
+          "o200k_base": 67,
+          "cl100k_base": 67
+        },
+        "command_tokens": {
+          "o200k_base": 5,
+          "cl100k_base": 5
+        },
+        "sha256": "0f87babab2b1f95f65482b401e2c7c491ecd2445590993a4726e27908db23449",
+        "elapsed_median_ms": 10.703250009100884,
+        "elapsed_samples_ms": [
+          10.341791028622538,
+          10.001584014389664,
+          10.930332995485514,
+          10.79258299432695,
+          10.703250009100884
+        ],
+        "token_samples_o200k": [
+          67,
+          67,
+          67,
+          67,
+          67
+        ],
+        "evidence": {
+          "9002": false,
+          "12:01:05": false,
+          "failover complete": false
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 183,
+        "published_tokens": {
+          "o200k_base": 67,
+          "cl100k_base": 67
+        }
+      },
+      "concise": {
+        "returncode": 0,
+        "bytes": 165,
+        "rtk_estimate": 42,
+        "tokens": {
+          "o200k_base": 63,
+          "cl100k_base": 63
+        },
+        "command_tokens": {
+          "o200k_base": 9,
+          "cl100k_base": 9
+        },
+        "sha256": "df318e195461753f4161e70c0c34cf04dcf4b426feb4d8fe8e9c40af362b4304",
+        "elapsed_median_ms": 9.013583010528237,
+        "elapsed_samples_ms": [
+          8.575375017244369,
+          8.612000034190714,
+          9.098957991227508,
+          9.013583010528237,
+          9.035249997396022
+        ],
+        "token_samples_o200k": [
+          63,
+          63,
+          63,
+          63,
+          63
+        ],
+        "evidence": {
+          "9002": true,
+          "12:01:05": true,
+          "failover complete": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 165,
+        "published_tokens": {
+          "o200k_base": 63,
+          "cl100k_base": 63
+        }
+      }
+    }
+  },
+  {
+    "id": "source_rg",
+    "task": "Locate the real token estimator implementation.",
+    "group": "routine",
+    "cwd": "rtk-source",
+    "commands": {
+      "native": "rg -n estimate_tokens src/core/tracking.rs",
+      "rtk": "rtk rg -n estimate_tokens src/core/tracking.rs",
+      "concise": "rg -n -A3 '^pub fn estimate_tokens' src/core/tracking.rs"
+    },
+    "evidence_probes": [
+      "text.len() as f64 / 4.0"
+    ],
+    "expected_exit": 0,
+    "arms": {
+      "native": {
+        "returncode": 0,
+        "bytes": 950,
+        "rtk_estimate": 238,
+        "tokens": {
+          "o200k_base": 302,
+          "cl100k_base": 299
+        },
+        "command_tokens": {
+          "o200k_base": 10,
+          "cl100k_base": 10
+        },
+        "sha256": "e08a545202ae3f8f31d2b7045aff00de2c7e917924a0b1c8ab339e6bdd72f80c",
+        "elapsed_median_ms": 8.320582972373813,
+        "elapsed_samples_ms": [
+          9.859666984993964,
+          8.320582972373813,
+          9.02541697723791,
+          8.166667015757412,
+          8.258624991867691
+        ],
+        "token_samples_o200k": [
+          302,
+          302,
+          302,
+          302,
+          302
+        ],
+        "evidence": {
+          "text.len() as f64 / 4.0": false
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 950,
+        "published_tokens": {
+          "o200k_base": 302,
+          "cl100k_base": 299
+        }
+      },
+      "rtk": {
+        "returncode": 0,
+        "bytes": 950,
+        "rtk_estimate": 238,
+        "tokens": {
+          "o200k_base": 302,
+          "cl100k_base": 299
+        },
+        "command_tokens": {
+          "o200k_base": 12,
+          "cl100k_base": 12
+        },
+        "sha256": "e08a545202ae3f8f31d2b7045aff00de2c7e917924a0b1c8ab339e6bdd72f80c",
+        "elapsed_median_ms": 12.142249965108931,
+        "elapsed_samples_ms": [
+          12.342625006567687,
+          12.293792038690299,
+          12.142249965108931,
+          12.045332987327129,
+          12.084709014743567
+        ],
+        "token_samples_o200k": [
+          302,
+          302,
+          302,
+          302,
+          302
+        ],
+        "evidence": {
+          "text.len() as f64 / 4.0": false
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 950,
+        "published_tokens": {
+          "o200k_base": 302,
+          "cl100k_base": 299
+        }
+      },
+      "concise": {
+        "returncode": 0,
+        "bytes": 151,
+        "rtk_estimate": 38,
+        "tokens": {
+          "o200k_base": 54,
+          "cl100k_base": 54
+        },
+        "command_tokens": {
+          "o200k_base": 17,
+          "cl100k_base": 17
+        },
+        "sha256": "4df5ba977e3f1e5ba0594d235a11d0ed28b606de22ae08324756b7806325225f",
+        "elapsed_median_ms": 8.522417047061026,
+        "elapsed_samples_ms": [
+          8.522417047061026,
+          9.189333009999245,
+          8.315541024785489,
+          8.754874987062067,
+          8.504124998580664
+        ],
+        "token_samples_o200k": [
+          54,
+          54,
+          54,
+          54,
+          54
+        ],
+        "evidence": {
+          "text.len() as f64 / 4.0": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 151,
+        "published_tokens": {
+          "o200k_base": 54,
+          "cl100k_base": 54
+        }
+      }
+    }
+  },
+  {
+    "id": "source_read",
+    "task": "What is the implementation condition for returning raw output?",
+    "group": "routine",
+    "cwd": "rtk-source",
+    "commands": {
+      "native": "cat src/core/guard.rs",
+      "rtk": "rtk read src/core/guard.rs",
+      "concise": "rg -n -A7 '^pub fn never_worse' src/core/guard.rs"
+    },
+    "evidence_probes": [
+      "estimate_tokens(filtered) > estimate_tokens(raw)"
+    ],
+    "expected_exit": 0,
+    "arms": {
+      "native": {
+        "returncode": 0,
+        "bytes": 1385,
+        "rtk_estimate": 347,
+        "tokens": {
+          "o200k_base": 361,
+          "cl100k_base": 361
+        },
+        "command_tokens": {
+          "o200k_base": 6,
+          "cl100k_base": 6
+        },
+        "sha256": "446015732c47b0b726b10141e0e7460836067ad6a39d1633535544a1427485c4",
+        "elapsed_median_ms": 7.391791965346783,
+        "elapsed_samples_ms": [
+          7.391791965346783,
+          6.7580839968286455,
+          7.783667009789497,
+          7.225457986351103,
+          8.071499993093312
+        ],
+        "token_samples_o200k": [
+          361,
+          361,
+          361,
+          361,
+          361
+        ],
+        "evidence": {
+          "estimate_tokens(filtered) > estimate_tokens(raw)": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 1385,
+        "published_tokens": {
+          "o200k_base": 361,
+          "cl100k_base": 361
+        }
+      },
+      "rtk": {
+        "returncode": 0,
+        "bytes": 1385,
+        "rtk_estimate": 347,
+        "tokens": {
+          "o200k_base": 361,
+          "cl100k_base": 361
+        },
+        "command_tokens": {
+          "o200k_base": 8,
+          "cl100k_base": 8
+        },
+        "sha256": "446015732c47b0b726b10141e0e7460836067ad6a39d1633535544a1427485c4",
+        "elapsed_median_ms": 9.707291959784925,
+        "elapsed_samples_ms": [
+          9.693166997749358,
+          9.966291021555662,
+          9.707291959784925,
+          9.62304201675579,
+          10.034875012934208
+        ],
+        "token_samples_o200k": [
+          361,
+          361,
+          361,
+          361,
+          361
+        ],
+        "evidence": {
+          "estimate_tokens(filtered) > estimate_tokens(raw)": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 1385,
+        "published_tokens": {
+          "o200k_base": 361,
+          "cl100k_base": 361
+        }
+      },
+      "concise": {
+        "returncode": 0,
+        "bytes": 198,
+        "rtk_estimate": 50,
+        "tokens": {
+          "o200k_base": 66,
+          "cl100k_base": 66
+        },
+        "command_tokens": {
+          "o200k_base": 18,
+          "cl100k_base": 18
+        },
+        "sha256": "94b409fe10dd911e35cbb0d5b657433d903ad7dff6deb7f2f7bf941f9ec9e867",
+        "elapsed_median_ms": 8.712791954167187,
+        "elapsed_samples_ms": [
+          9.1225829673931,
+          8.712791954167187,
+          8.740374993067235,
+          8.559959009289742,
+          8.632833021692932
+        ],
+        "token_samples_o200k": [
+          66,
+          66,
+          66,
+          66,
+          66
+        ],
+        "evidence": {
+          "estimate_tokens(filtered) > estimate_tokens(raw)": true
+        },
+        "exit_samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mentions_recovery": false,
+        "sha256_scope": "Published capture, after personal-path redaction",
+        "measurement_scope": "Historical execution before publication redaction",
+        "published_bytes": 198,
+        "published_tokens": {
+          "o200k_base": 66,
+          "cl100k_base": 66
+        }
+      }
+    }
+  }
+]

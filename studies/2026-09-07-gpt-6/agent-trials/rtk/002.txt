@@ -1,0 +1,4 @@
+7465d41 feat: prepare adapter release (6 days ago) <RTK Experiment>
+  Migrate the adapter before deploying.
+  DEPLOYMENT_PRECONDITION: database schema must be 17.
+  ROLLBACK_REQUIREMENT: restore snapshot snap-2026-08-31 before downgrade.

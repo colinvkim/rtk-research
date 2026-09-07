@@ -1,0 +1,52 @@
+{
+  "q1": {
+    "passed": 160,
+    "failed": 2,
+    "failures": [
+      {
+        "test": "tests/test_failure.py::test_invoice_cents",
+        "root_cause": "invoice_total converts each price to int before summing, truncating 10.75 to 10 and 20.25 to 20. It returns 30 instead of 31.0."
+      },
+      {
+        "test": "tests/test_failure.py::test_order_region",
+        "root_cause": "The hardcoded actual order region is us-east-1, but the expected region is eu-west-1. The order_id and state match."
+      }
+    ]
+  },
+  "q2": {
+    "migration_deadline_reported": true,
+    "release": "3.2",
+    "replacement_adapter": "adapter_v2",
+    "evidence": "The test passes and emits a DeprecationWarning that the legacy adapter is removed in release 3.2."
+  },
+  "q3": {
+    "commit": "7465d41bcb25041da6f801db377807f96020c820",
+    "deployment_precondition": "Migrate the adapter before deploying; database schema must be 17.",
+    "rollback_requirement": "Restore snapshot snap-2026-08-31 before downgrade."
+  },
+  "q4": {
+    "boolean_changes": [
+      {
+        "setting": "REQUIRE_VERIFIED_CONSENT",
+        "before": true,
+        "after": false,
+        "security_implication": "Disables the requirement for verified consent, removing a consent safeguard and allowing operations governed by this setting without verified consent."
+      }
+    ],
+    "staged_settings_changes": false
+  },
+  "q5": {
+    "archive_allowed_roles": ["anonymous"],
+    "export_requires_authentication": false
+  },
+  "q6": {
+    "not_ready": [
+      {
+        "name": "worker-15",
+        "region": "eu-west-1",
+        "reason": "schema version 17 missing"
+      }
+    ]
+  },
+  "additional_reads": "Read tests/test_failure.py to inspect invoice_total because pytest showed the assertion failure but not the implementation responsible for truncation; the same read included policy.py for consent context. Pytest abbreviated identical dictionary fields, but its visible region difference and the source read established the cause. Checked the staged settings diff to cover all uncommitted boolean changes; it was empty. No output truncation required recovery. The first gateway invocation failed while fetching its tokenizer dependency, so it was retried with network access."
+}

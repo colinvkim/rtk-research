@@ -1,0 +1,40 @@
+{
+  "q1": {
+    "passed": 160,
+    "failed": 2,
+    "failures": {
+      "test_invoice_cents": "invoice_total casts each price to int before summing, discarding fractional amounts: 10.75 + 20.25 becomes 10 + 20 = 30 instead of 31.0.",
+      "test_order_region": "The actual region is us-east-1 but the expected region is eu-west-1; order_id and state match."
+    }
+  },
+  "q2": {
+    "passed": 1,
+    "migration_deadline_reported": true,
+    "removal_release": "3.2",
+    "replacement_adapter": "adapter_v2"
+  },
+  "q3": {
+    "deployment_precondition": "Migrate the adapter before deploying; the database schema must be 17.",
+    "rollback_requirement": "Restore snapshot snap-2026-08-31 before downgrade."
+  },
+  "q4": [
+    {
+      "setting": "REQUIRE_VERIFIED_CONSENT",
+      "before": true,
+      "after": false,
+      "security_implication": "Disables the verified-consent requirement, permitting operations without verified consent."
+    }
+  ],
+  "q5": {
+    "archive_roles": ["anonymous"],
+    "export_requires_authentication": false
+  },
+  "q6": [
+    {
+      "name": "worker-15",
+      "region": "eu-west-1",
+      "reason": "schema version 17 missing"
+    }
+  ],
+  "additional_reads": "The short pytest output abbreviated the dictionary comparison; reading tests/test_failure.py confirmed both the complete mismatch and the integer-conversion cause. After sampling deployments.json to identify its structure, a jq query scanned every deployment and returned all entries whose ready field was not true. A file-discovery command failed due to shell glob quoting and was replaced by rg --files. No truncated output was treated as evidence of absence."
+}

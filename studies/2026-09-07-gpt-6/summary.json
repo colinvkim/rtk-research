@@ -1,0 +1,531 @@
+{
+  "commands": {
+    "o200k_base": {
+      "native": 7801,
+      "rtk": 2995,
+      "concise": 1201,
+      "rtk_reduction_pct": 61.607486219715426,
+      "concise_reduction_pct": 84.60453787975901
+    },
+    "cl100k_base": {
+      "native": 7766,
+      "rtk": 2986,
+      "concise": 1188,
+      "rtk_reduction_pct": 61.550347669327834,
+      "concise_reduction_pct": 84.70254957507082
+    },
+    "bytes4": {
+      "native": 6121,
+      "rtk": 2337,
+      "concise": 1211
+    },
+    "required_evidence_lost": [
+      "pytest_fail",
+      "pytest_warning",
+      "pytest_skip",
+      "git_diff_large",
+      "rg_many",
+      "read_minimal",
+      "json_array",
+      "log_ids"
+    ],
+    "overhead_ms": {
+      "cargo_pass": 3.3485829480923712,
+      "cargo_fail": 4.27229207707569,
+      "pytest_pass": 1.3452920247800648,
+      "pytest_fail": -0.24437601678073406,
+      "pytest_warning": 4.0194999892264605,
+      "pytest_skip": 4.683333041612059,
+      "git_status": 12.455290998332202,
+      "git_diff_small": 12.40200101165101,
+      "git_diff_large": 12.113792006857693,
+      "git_log_body": 3.1967080431059003,
+      "rg_many": 3.796001023147255,
+      "rg_long": 3.5037510679103434,
+      "read_default": 3.0321249505504966,
+      "read_minimal": 2.641208004206419,
+      "json_array": 2.9248750070109963,
+      "log_ids": 3.153249970637262,
+      "source_rg": 3.8216669927351177,
+      "source_read": 2.3154999944381416
+    }
+  },
+  "agents": {
+    "native": {
+      "n": 3,
+      "output_tokens": [
+        4321,
+        6153,
+        4235
+      ],
+      "median_output_tokens": 4321,
+      "mean_output_tokens": 4903,
+      "sum_output_tokens": 14709,
+      "median_output_plus_command": 4380,
+      "calls": [
+        10,
+        9,
+        9
+      ],
+      "correct_questions_per_run": [
+        6,
+        6,
+        6
+      ]
+    },
+    "rtk": {
+      "n": 3,
+      "output_tokens": [
+        5761,
+        5838,
+        5084
+      ],
+      "median_output_tokens": 5761,
+      "mean_output_tokens": 5561,
+      "sum_output_tokens": 16683,
+      "median_output_plus_command": 5848,
+      "calls": [
+        11,
+        11,
+        13
+      ],
+      "correct_questions_per_run": [
+        6,
+        6,
+        6
+      ]
+    },
+    "concise": {
+      "n": 3,
+      "output_tokens": [
+        4216,
+        3198,
+        3406
+      ],
+      "median_output_tokens": 3406,
+      "mean_output_tokens": 3606.6666666666665,
+      "sum_output_tokens": 10820,
+      "median_output_plus_command": 3514,
+      "calls": [
+        13,
+        10,
+        9
+      ],
+      "correct_questions_per_run": [
+        6,
+        6,
+        6
+      ]
+    }
+  },
+  "runs": [
+    {
+      "run": "concise",
+      "arm": "concise",
+      "questions_correct_manual": 6,
+      "fact_coverage": {
+        "test_counts_and_causes": true,
+        "warning_deadline": true,
+        "commit_requirements": true,
+        "boolean_change": true,
+        "route_access": true,
+        "deployment_exception": true
+      },
+      "calls": 13,
+      "tool_output_tokens": 4289,
+      "tool_output_excluding_task": 4044,
+      "native_command_tokens": 170,
+      "explicit_raw_bypass_calls": 0,
+      "child_command_wall_ms": 348.19800000000004,
+      "command_plus_output_tokens": 4459,
+      "observed_output_tokens": 4216,
+      "additional_unrecorded_attempts": 0,
+      "observed_output_plus_command_tokens": 4386
+    },
+    {
+      "run": "concise_r2",
+      "arm": "concise",
+      "questions_correct_manual": 6,
+      "fact_coverage": {
+        "test_counts_and_causes": true,
+        "warning_deadline": true,
+        "commit_requirements": true,
+        "boolean_change": true,
+        "route_access": true,
+        "deployment_exception": true
+      },
+      "calls": 10,
+      "tool_output_tokens": 3113,
+      "tool_output_excluding_task": 2868,
+      "native_command_tokens": 97,
+      "explicit_raw_bypass_calls": 0,
+      "child_command_wall_ms": 324.005,
+      "command_plus_output_tokens": 3210,
+      "observed_output_tokens": 3198,
+      "additional_unrecorded_attempts": 1,
+      "observed_output_plus_command_tokens": 3295
+    },
+    {
+      "run": "concise_r3",
+      "arm": "concise",
+      "questions_correct_manual": 6,
+      "fact_coverage": {
+        "test_counts_and_causes": true,
+        "warning_deadline": true,
+        "commit_requirements": true,
+        "boolean_change": true,
+        "route_access": true,
+        "deployment_exception": true
+      },
+      "calls": 9,
+      "tool_output_tokens": 3406,
+      "tool_output_excluding_task": 3161,
+      "native_command_tokens": 108,
+      "explicit_raw_bypass_calls": 0,
+      "child_command_wall_ms": 226.93,
+      "command_plus_output_tokens": 3514,
+      "observed_output_tokens": 3406,
+      "additional_unrecorded_attempts": 0,
+      "observed_output_plus_command_tokens": 3514
+    },
+    {
+      "run": "native",
+      "arm": "native",
+      "questions_correct_manual": 6,
+      "fact_coverage": {
+        "test_counts_and_causes": true,
+        "warning_deadline": true,
+        "commit_requirements": true,
+        "boolean_change": true,
+        "route_access": true,
+        "deployment_exception": true
+      },
+      "calls": 10,
+      "tool_output_tokens": 4321,
+      "tool_output_excluding_task": 4076,
+      "native_command_tokens": 59,
+      "explicit_raw_bypass_calls": 0,
+      "child_command_wall_ms": 585.616,
+      "command_plus_output_tokens": 4380,
+      "observed_output_tokens": 4321,
+      "additional_unrecorded_attempts": 0,
+      "observed_output_plus_command_tokens": 4380
+    },
+    {
+      "run": "native_r2",
+      "arm": "native",
+      "questions_correct_manual": 6,
+      "fact_coverage": {
+        "test_counts_and_causes": true,
+        "warning_deadline": true,
+        "commit_requirements": true,
+        "boolean_change": true,
+        "route_access": true,
+        "deployment_exception": true
+      },
+      "calls": 9,
+      "tool_output_tokens": 6153,
+      "tool_output_excluding_task": 5908,
+      "native_command_tokens": 56,
+      "explicit_raw_bypass_calls": 0,
+      "child_command_wall_ms": 393.023,
+      "command_plus_output_tokens": 6209,
+      "observed_output_tokens": 6153,
+      "additional_unrecorded_attempts": 0,
+      "observed_output_plus_command_tokens": 6209
+    },
+    {
+      "run": "native_r3",
+      "arm": "native",
+      "questions_correct_manual": 6,
+      "fact_coverage": {
+        "test_counts_and_causes": true,
+        "warning_deadline": true,
+        "commit_requirements": true,
+        "boolean_change": true,
+        "route_access": true,
+        "deployment_exception": true
+      },
+      "calls": 9,
+      "tool_output_tokens": 4235,
+      "tool_output_excluding_task": 3990,
+      "native_command_tokens": 57,
+      "explicit_raw_bypass_calls": 0,
+      "child_command_wall_ms": 352.616,
+      "command_plus_output_tokens": 4292,
+      "observed_output_tokens": 4235,
+      "additional_unrecorded_attempts": 0,
+      "observed_output_plus_command_tokens": 4292
+    },
+    {
+      "run": "rtk",
+      "arm": "rtk",
+      "questions_correct_manual": 6,
+      "fact_coverage": {
+        "test_counts_and_causes": true,
+        "warning_deadline": true,
+        "commit_requirements": true,
+        "boolean_change": true,
+        "route_access": true,
+        "deployment_exception": true
+      },
+      "calls": 11,
+      "tool_output_tokens": 5761,
+      "tool_output_excluding_task": 5516,
+      "native_command_tokens": 87,
+      "explicit_raw_bypass_calls": 4,
+      "child_command_wall_ms": 461.463,
+      "command_plus_output_tokens": 5848,
+      "observed_output_tokens": 5761,
+      "additional_unrecorded_attempts": 0,
+      "observed_output_plus_command_tokens": 5848
+    },
+    {
+      "run": "rtk_r2",
+      "arm": "rtk",
+      "questions_correct_manual": 6,
+      "fact_coverage": {
+        "test_counts_and_causes": true,
+        "warning_deadline": true,
+        "commit_requirements": true,
+        "boolean_change": true,
+        "route_access": true,
+        "deployment_exception": true
+      },
+      "calls": 11,
+      "tool_output_tokens": 5838,
+      "tool_output_excluding_task": 5593,
+      "native_command_tokens": 92,
+      "explicit_raw_bypass_calls": 4,
+      "child_command_wall_ms": 602.1700000000001,
+      "command_plus_output_tokens": 5930,
+      "observed_output_tokens": 5838,
+      "additional_unrecorded_attempts": 0,
+      "observed_output_plus_command_tokens": 5930
+    },
+    {
+      "run": "rtk_r3",
+      "arm": "rtk",
+      "questions_correct_manual": 6,
+      "fact_coverage": {
+        "test_counts_and_causes": true,
+        "warning_deadline": true,
+        "commit_requirements": true,
+        "boolean_change": true,
+        "route_access": true,
+        "deployment_exception": true
+      },
+      "calls": 13,
+      "tool_output_tokens": 5084,
+      "tool_output_excluding_task": 4839,
+      "native_command_tokens": 74,
+      "explicit_raw_bypass_calls": 2,
+      "child_command_wall_ms": 433.678,
+      "command_plus_output_tokens": 5158,
+      "observed_output_tokens": 5084,
+      "additional_unrecorded_attempts": 0,
+      "observed_output_plus_command_tokens": 5158
+    }
+  ],
+  "recovery": {
+    "pytest_warning": {
+      "returncode": 0,
+      "elapsed_ms": 110.07054196670651,
+      "bytes": 630,
+      "rtk_estimate": 158,
+      "tokens": {
+        "o200k_base": 156,
+        "cl100k_base": 149
+      },
+      "command_tokens": {
+        "o200k_base": 8,
+        "cl100k_base": 7
+      },
+      "sha256": "571efb66115076bcfe0aa83aad3aeb17a5f0e195bd3a1a66152fae1e077d6d52",
+      "command": "pytest -q tests/test_legacy.py",
+      "contains_region": false,
+      "sha256_scope": "Published recovery text after personal-path redaction",
+      "published_tokens": {
+        "o200k_base": 137,
+        "cl100k_base": 130
+      }
+    },
+    "pytest_skip": {
+      "returncode": 0,
+      "elapsed_ms": 90.69579199422151,
+      "bytes": 277,
+      "rtk_estimate": 70,
+      "tokens": {
+        "o200k_base": 52,
+        "cl100k_base": 51
+      },
+      "command_tokens": {
+        "o200k_base": 10,
+        "cl100k_base": 10
+      },
+      "sha256": "25faeef9bf546dfae22f23e0164f36a5767f15eb01cbdc529442276dc813f8a6",
+      "command": "pytest -q -rs tests/test_skipped.py",
+      "contains_region": false,
+      "sha256_scope": "Published recovery text after personal-path redaction",
+      "published_tokens": {
+        "o200k_base": 52,
+        "cl100k_base": 51
+      }
+    },
+    "git_diff_large_full": {
+      "returncode": 0,
+      "elapsed_ms": 17.559750005602837,
+      "bytes": 3771,
+      "rtk_estimate": 943,
+      "tokens": {
+        "o200k_base": 1868,
+        "cl100k_base": 1865
+      },
+      "command_tokens": {
+        "o200k_base": 5,
+        "cl100k_base": 5
+      },
+      "sha256": "42ec8ad0173d2d186561964053ec4ca96c18a1d95b65f5f8eded003f43d2e34c",
+      "command": "git diff -- settings.py",
+      "contains_region": false,
+      "sha256_scope": "Published recovery text after personal-path redaction",
+      "published_tokens": {
+        "o200k_base": 1868,
+        "cl100k_base": 1865
+      }
+    },
+    "git_diff_large_targeted": {
+      "returncode": 0,
+      "elapsed_ms": 16.112792014610022,
+      "bytes": 67,
+      "rtk_estimate": 17,
+      "tokens": {
+        "o200k_base": 22,
+        "cl100k_base": 20
+      },
+      "command_tokens": {
+        "o200k_base": 24,
+        "cl100k_base": 24
+      },
+      "sha256": "1cf1f3fa3351f642d4c4ec0bb96a3cad0409f650e9d5b1bbdbcd6ca022eb0905",
+      "command": "git diff -U0 -- settings.py | rg '^[+-][A-Z_]+ = (True|False)'",
+      "contains_region": false,
+      "sha256_scope": "Published recovery text after personal-path redaction",
+      "published_tokens": {
+        "o200k_base": 22,
+        "cl100k_base": 20
+      }
+    },
+    "rg_many_targeted": {
+      "returncode": 0,
+      "elapsed_ms": 8.199165982659906,
+      "bytes": 55,
+      "rtk_estimate": 14,
+      "tokens": {
+        "o200k_base": 12,
+        "cl100k_base": 12
+      },
+      "command_tokens": {
+        "o200k_base": 8,
+        "cl100k_base": 8
+      },
+      "sha256": "5184d736c564bb25311ff270befa276ab719b0df783c6a09b4c722dbc734b1ac",
+      "command": "rg -n /admin/archive routes.py",
+      "contains_region": false,
+      "sha256_scope": "Published recovery text after personal-path redaction",
+      "published_tokens": {
+        "o200k_base": 12,
+        "cl100k_base": 12
+      }
+    },
+    "json_array_targeted": {
+      "returncode": 0,
+      "elapsed_ms": 9.168333024717867,
+      "bytes": 58,
+      "rtk_estimate": 15,
+      "tokens": {
+        "o200k_base": 15,
+        "cl100k_base": 15
+      },
+      "command_tokens": {
+        "o200k_base": 22,
+        "cl100k_base": 22
+      },
+      "sha256": "a0d5657a5b5cee8da00eb4e3cc73e2c0b7684ef78df55fa08bee983ec5afa09c",
+      "command": "jq -c '.deployments[] | select(.ready == false) | {name, reason}' deployments.json",
+      "contains_region": false,
+      "sha256_scope": "Published recovery text after personal-path redaction",
+      "published_tokens": {
+        "o200k_base": 15,
+        "cl100k_base": 15
+      }
+    },
+    "log_ids_targeted": {
+      "returncode": 0,
+      "elapsed_ms": 8.25470796553418,
+      "bytes": 165,
+      "rtk_estimate": 42,
+      "tokens": {
+        "o200k_base": 63,
+        "cl100k_base": 63
+      },
+      "command_tokens": {
+        "o200k_base": 9,
+        "cl100k_base": 9
+      },
+      "sha256": "df318e195461753f4161e70c0c34cf04dcf4b426feb4d8fe8e9c40af362b4304",
+      "command": "rg 'ERROR|failover' events.log",
+      "contains_region": false,
+      "sha256_scope": "Published recovery text after personal-path redaction",
+      "published_tokens": {
+        "o200k_base": 63,
+        "cl100k_base": 63
+      }
+    },
+    "pytest_fail_tee": {
+      "returncode": 0,
+      "elapsed_ms": 7.092332991305739,
+      "bytes": 844,
+      "rtk_estimate": 211,
+      "tokens": {
+        "o200k_base": 203,
+        "cl100k_base": 204
+      },
+      "command_tokens": {
+        "o200k_base": 17,
+        "cl100k_base": 17
+      },
+      "sha256": "b457ca7be18627472fd942931c010d840996de1c9ed9e635efa1d1ab053d63ed",
+      "command": "cat .rtk/tee/pytest_fail/1788815073_pytest.log",
+      "contains_region": true,
+      "sha256_scope": "Published recovery text after personal-path redaction",
+      "published_tokens": {
+        "o200k_base": 203,
+        "cl100k_base": 204
+      }
+    },
+    "rg_many_tail": {
+      "returncode": 0,
+      "elapsed_ms": 7.087042031344026,
+      "bytes": 1025,
+      "rtk_estimate": 257,
+      "tokens": {
+        "o200k_base": 285,
+        "cl100k_base": 285
+      },
+      "command_tokens": {
+        "o200k_base": 25,
+        "cl100k_base": 25
+      },
+      "sha256": "24b7bb3a3bf08b86fe07bfdddba14a89b9838115d968f20b456c07bc66f5a7dd",
+      "command": "tail -n +26 .rtk/tee/rg_many/1788815079_grep_0_routes_py.log",
+      "contains_region": false,
+      "sha256_scope": "Published recovery text after personal-path redaction",
+      "published_tokens": {
+        "o200k_base": 285,
+        "cl100k_base": 285
+      }
+    }
+  },
+  "publication_note": "Historical statistics retained. Personal paths in published captures were replaced; publication-token-counts.json records redacted text counts."
+}

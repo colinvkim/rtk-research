@@ -1,0 +1,120 @@
+
+running 101 tests
+test tests::check_001 ... ok
+test tests::check_002 ... ok
+test tests::check_000 ... ok
+test tests::check_003 ... ok
+test tests::check_004 ... ok
+test tests::check_005 ... ok
+test tests::check_006 ... ok
+test tests::check_007 ... ok
+test tests::check_008 ... ok
+test tests::check_009 ... ok
+test tests::check_010 ... ok
+test tests::check_011 ... ok
+test tests::check_012 ... ok
+test tests::check_013 ... ok
+test tests::check_014 ... ok
+test tests::check_015 ... ok
+test tests::check_016 ... ok
+test tests::check_017 ... ok
+test tests::check_018 ... ok
+test tests::check_019 ... ok
+test tests::check_020 ... ok
+test tests::check_021 ... ok
+test tests::check_022 ... ok
+test tests::check_023 ... ok
+test tests::check_024 ... ok
+test tests::check_025 ... ok
+test tests::check_026 ... ok
+test tests::check_027 ... ok
+test tests::check_028 ... ok
+test tests::check_029 ... ok
+test tests::check_030 ... ok
+test tests::check_031 ... ok
+test tests::check_032 ... ok
+test tests::check_033 ... ok
+test tests::check_034 ... ok
+test tests::check_035 ... ok
+test tests::check_036 ... ok
+test tests::check_037 ... ok
+test tests::check_038 ... ok
+test tests::check_039 ... ok
+test tests::check_040 ... ok
+test tests::check_041 ... ok
+test tests::check_042 ... ok
+test tests::check_043 ... ok
+test tests::check_044 ... ok
+test tests::check_045 ... ok
+test tests::check_046 ... ok
+test tests::check_047 ... ok
+test tests::check_048 ... ok
+test tests::check_049 ... ok
+test tests::check_050 ... ok
+test tests::check_051 ... ok
+test tests::check_052 ... ok
+test tests::check_053 ... ok
+test tests::check_054 ... ok
+test tests::check_055 ... ok
+test tests::check_056 ... ok
+test tests::check_057 ... ok
+test tests::check_058 ... ok
+test tests::check_059 ... ok
+test tests::check_060 ... ok
+test tests::check_061 ... ok
+test tests::check_062 ... ok
+test tests::check_063 ... ok
+test tests::check_064 ... ok
+test tests::check_065 ... ok
+test tests::check_066 ... ok
+test tests::check_067 ... ok
+test tests::check_068 ... ok
+test tests::check_069 ... ok
+test tests::check_070 ... ok
+test tests::check_071 ... ok
+test tests::check_072 ... ok
+test tests::check_073 ... ok
+test tests::check_074 ... ok
+test tests::check_075 ... ok
+test tests::check_076 ... ok
+test tests::check_077 ... ok
+test tests::check_078 ... ok
+test tests::check_079 ... ok
+test tests::check_080 ... ok
+test tests::check_081 ... ok
+test tests::check_082 ... ok
+test tests::check_083 ... ok
+test tests::check_084 ... ok
+test tests::check_085 ... ok
+test tests::check_086 ... ok
+test tests::check_087 ... ok
+test tests::check_088 ... ok
+test tests::check_089 ... ok
+test tests::check_090 ... ok
+test tests::check_091 ... ok
+test tests::check_092 ... ok
+test tests::check_093 ... ok
+test tests::check_094 ... ok
+test tests::check_095 ... ok
+test tests::check_096 ... ok
+test tests::check_097 ... ok
+test tests::check_098 ... ok
+test tests::check_099 ... ok
+test tests::failing_sum ... FAILED
+
+failures:
+
+---- tests::failing_sum stdout ----
+
+thread 'tests::failing_sum' (7460134) panicked at src/lib.rs:204:24:
+assertion `left == right` failed: CALCULATION_SENTINEL
+  left: 4
+ right: 5
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    tests::failing_sum
+
+test result: FAILED. 100 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

@@ -1,0 +1,48 @@
+{
+  "q1": {
+    "passed": 160,
+    "failed": 2,
+    "failures": [
+      {
+        "test": "tests/test_failure.py::test_invoice_cents",
+        "root_cause": "invoice_total converts each price to int before summing, discarding cents: 10.75 and 20.25 become 10 and 20, producing 30 instead of 31.0."
+      },
+      {
+        "test": "tests/test_failure.py::test_order_region",
+        "root_cause": "The actual order dictionary uses region us-east-1 while the expected dictionary uses eu-west-1; the other fields match."
+      }
+    ]
+  },
+  "q2": {
+    "passed": 1,
+    "failed": 0,
+    "migration_deadline_reported": true,
+    "release": "3.2",
+    "replacement_adapter": "adapter_v2",
+    "evidence": "DeprecationWarning says the legacy adapter is removed in release 3.2."
+  },
+  "q3": {
+    "deployment_precondition": "Migrate the adapter before deploying; database schema must be 17.",
+    "rollback_requirement": "Restore snapshot snap-2026-08-31 before downgrade."
+  },
+  "q4": [
+    {
+      "setting": "REQUIRE_VERIFIED_CONSENT",
+      "before": true,
+      "after": false,
+      "security_implication": "Disables the verified-consent requirement, allowing operations without verified consent; archive deletion policy documents verified consent as required by retention covenant RC-17."
+    }
+  ],
+  "q5": {
+    "admin_archive_roles": ["anonymous"],
+    "admin_export_requires_authentication": false
+  },
+  "q6": [
+    {
+      "name": "worker-15",
+      "region": "eu-west-1",
+      "reason": "schema version 17 missing"
+    }
+  ],
+  "additional_reads": "The combined pytest run reported 161 passed and 2 failed, including the one passing legacy test. Reading test sources established the q1 count and the invoice truncation root cause; pytest abbreviated the dictionary comparison but showed the differing region. The initial deployments.json prefix did not cover the full file, so a jq query selected every deployment whose ready field was not true from the complete JSON. No tool output truncation remained unresolved."
+}

@@ -1,0 +1,22 @@
+........................................................................ [ 44%]
+........................................................................ [ 88%]
+................FF                                                       [100%]
+=================================== FAILURES ===================================
+______________________________ test_invoice_cents ______________________________
+tests/test_failure.py:5: in test_invoice_cents
+    assert invoice_total([10.75, 20.25]) == 31.0
+E   assert 30 == 31.0
+E    +  where 30 = invoice_total([10.75, 20.25])
+______________________________ test_order_region _______________________________
+tests/test_failure.py:10: in test_order_region
+    assert actual == expected
+E   AssertionError: assert {'order_id': ...ate': 'ready'} == {'order_id': ...ate': 'ready'}
+E     
+E     Omitting 2 identical items, use -vv to show
+E     Differing items:
+E     {'region': 'us-east-1'} != {'region': 'eu-west-1'}
+E     Use -v to get more diff
+=========================== short test summary info ============================
+FAILED tests/test_failure.py::test_invoice_cents - assert 30 == 31.0
+FAILED tests/test_failure.py::test_order_region - AssertionError: assert {'or...
+2 failed, 160 passed in 0.03s

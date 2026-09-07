@@ -1,0 +1,22 @@
+
+running 101 tests
+....................................................................................... 87/101
+............. 100/101
+tests::failing_sum --- FAILED
+
+failures:
+
+---- tests::failing_sum stdout ----
+
+thread 'tests::failing_sum' (7459994) panicked at src/lib.rs:204:24:
+assertion `left == right` failed: CALCULATION_SENTINEL
+  left: 4
+ right: 5
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    tests::failing_sum
+
+test result: FAILED. 100 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

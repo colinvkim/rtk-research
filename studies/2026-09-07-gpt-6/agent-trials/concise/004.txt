@@ -1,0 +1,7 @@
+feat: prepare adapter release
+
+Migrate the adapter before deploying.
+
+DEPLOYMENT_PRECONDITION: database schema must be 17.
+ROLLBACK_REQUIREMENT: restore snapshot snap-2026-08-31 before downgrade.
+

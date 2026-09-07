@@ -1,0 +1,26 @@
+{
+  "concise": {
+    "exclude_observation_seq": [
+      8
+    ],
+    "additional_attempts_not_recorded": 0,
+    "diagnostic": "sh: /admin/export: No such file or directory\nException ignored while flushing sys.stdout:\nBrokenPipeError: [Errno 32] Broken pipe\n",
+    "reason": "Unquoted pipe sent gateway output to a nonexistent command. Agent confirmed none of the 105-token rg output reached it. Exact external diagnostic supplied by that agent in a follow-up audit.",
+    "diagnostic_tokens": 32,
+    "excluded_tokens": 105,
+    "net_output_token_adjustment": -73,
+    "published_diagnostic_tokens": 32,
+    "measurement_scope": "diagnostic_tokens and adjustments retain the historical run counts; published_diagnostic_tokens counts the redacted diagnostic."
+  },
+  "concise_r2": {
+    "exclude_observation_seq": [],
+    "additional_attempts_not_recorded": 1,
+    "diagnostic": "zsh:1: no matches found: /workspace/rtk-experiment/work/venv/bin/python /workspace/rtk-experiment/work/observe.py -- rg --files -g *route* -g deployments.json\n",
+    "reason": "Outer shell expanded a glob and failed before the gateway ran. Exact diagnostic supplied by that agent in a follow-up audit.",
+    "diagnostic_tokens": 85,
+    "excluded_tokens": 0,
+    "net_output_token_adjustment": 85,
+    "published_diagnostic_tokens": 47,
+    "measurement_scope": "diagnostic_tokens and adjustments retain the historical run counts; published_diagnostic_tokens counts the redacted diagnostic."
+  }
+}

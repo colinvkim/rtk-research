@@ -1,0 +1,49 @@
+{
+  "q1": {
+    "passed": 160,
+    "failed": 2,
+    "failures": [
+      {
+        "test": "tests/test_failure.py::test_invoice_cents",
+        "root_cause": "invoice_total converts each price to int before summing, discarding cents: 10.75 + 20.25 becomes 10 + 20 = 30 instead of 31.0."
+      },
+      {
+        "test": "tests/test_failure.py::test_order_region",
+        "root_cause": "The actual order hardcodes region us-east-1, while the expected order requires eu-west-1. The other fields match."
+      }
+    ]
+  },
+  "q2": {
+    "passed": 1,
+    "failed": 0,
+    "migration_deadline_reported": true,
+    "release": "3.2",
+    "replacement_adapter": "adapter_v2",
+    "evidence": "DeprecationWarning says the legacy adapter is removed in release 3.2."
+  },
+  "q3": {
+    "deployment_precondition": "Migrate the adapter before deploying; the database schema must be 17.",
+    "rollback_requirement": "Restore snapshot snap-2026-08-31 before downgrade."
+  },
+  "q4": [
+    {
+      "setting": "REQUIRE_VERIFIED_CONSENT",
+      "before": true,
+      "after": false,
+      "security_implication": "Disables the requirement for verified consent, weakening the consent safeguard and allowing operations without that verification."
+    }
+  ],
+  "q5": {
+    "archive_roles": ["anonymous"],
+    "export_requires_authentication": false,
+    "evidence": "routes.py explicitly allows anonymous for /admin/archive; long_routes.py sets requires_auth=False for /admin/export."
+  },
+  "q6": [
+    {
+      "name": "worker-15",
+      "region": "eu-west-1",
+      "reason": "schema version 17 missing"
+    }
+  ],
+  "additional_reads": "Read tests/test_failure.py to establish the implementation cause behind the concise failure output. A first route search failed because its pattern was interpreted as a shell pipeline; separate -e patterns fixed it. The initial filename lookup did not reveal long_routes.py, and the targeted routes.py search did not contain export, so a repository search located the export definition. The deployment prefix showed only part of the file; a jq query over the complete JSON selected every entry whose ready value was not true. Checked the staged settings diff as well; it was empty."
+}

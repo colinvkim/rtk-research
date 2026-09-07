@@ -1,0 +1,13 @@
+Pytest: 0 passed, 2 failed
+
+Failures:
+1. [FAIL] test_invoice_cents
+     tests/test_failure.py:5: in test_invoice_cents
+     assert invoice_total([10.75, 20.25]) == 31.0
+     E   assert 30 == 31.0
+
+2. [FAIL] test_order_region
+     tests/test_failure.py:10: in test_order_region
+     assert actual == expected
+     E   AssertionError: assert {'order_id': ...ate': 'ready'} == {'order_id': ...ate': 'ready'}
+[full output: .rtk/tee/pytest_fail/1788815073_pytest.log]

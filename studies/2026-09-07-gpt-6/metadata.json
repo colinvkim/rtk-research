@@ -1,0 +1,12 @@
+{
+  "date": "2026-09-07",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "python": "3.14.6 (main, Jun 23 2026, 15:46:31) [Clang 22.1.3 ]",
+  "tiktoken_version": "0.14.0",
+  "repetitions": 5,
+  "random_seed": 20260907,
+  "source_commit": "fde0a8f185945556f51718de0f4c430bb62b3df6",
+  "rtk_version": "rtk 0.48.0",
+  "tokenizer_note": "o200k_base primary; cl100k_base sensitivity. No verified public GPT-6 Astra tokenizer mapping.",
+  "method": "All subprocesses captured fully, without tool output caps. Native via rtk run raw escape hatch. Both stdout and stderr counted. Timings include common outer rtk run overhead; cargo warmed. Existing user RTK default config, tracking redirected and tee path isolated. Exact billing and reasoning tokens not measured."
+}

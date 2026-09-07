@@ -1,0 +1,10 @@
+---- tests::failing_sum stdout ----
+
+thread 'tests::failing_sum' (7459856) panicked at src/lib.rs:204:24:
+assertion `left == right` failed: CALCULATION_SENTINEL
+  left: 4
+ right: 5
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+[full output: .rtk/tee/cargo_fail/1788815071_cargo_test.log]

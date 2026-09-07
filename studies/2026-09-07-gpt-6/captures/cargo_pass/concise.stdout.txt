@@ -1,0 +1,6 @@
+
+running 100 tests
+....................................................................................... 87/100
+.............
+test result: ok. 100 passed; 0 failed; 0 ignored; 0 measured; 1 filtered out; finished in 0.00s
+

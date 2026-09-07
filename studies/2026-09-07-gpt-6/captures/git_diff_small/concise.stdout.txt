@@ -1,0 +1,9 @@
+diff --git a/policy.py b/policy.py
+index f051d5e..4026eac 100644
+--- a/policy.py
++++ b/policy.py
+@@ -5,3 +5,3 @@ def may_delete_archive(role, verified):
+     if not verified:
+-        return False
++        return True
+     return True

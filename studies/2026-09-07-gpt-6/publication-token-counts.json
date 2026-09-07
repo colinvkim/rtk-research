@@ -1,0 +1,382 @@
+{
+  "scope": "Personal-path replacements only; later documentation/metadata additions are not experiment measurements.",
+  "changed_files": [
+    {
+      "file": "studies/2026-09-07-gpt-6/agent-trials/concise/003.txt",
+      "original_bytes": 637,
+      "published_bytes": 602,
+      "original_tokens": {
+        "o200k_base": 159,
+        "cl100k_base": 152
+      },
+      "published_tokens": {
+        "o200k_base": 140,
+        "cl100k_base": 133
+      }
+    },
+    {
+      "file": "studies/2026-09-07-gpt-6/agent-trials/concise/initial_prompt.txt",
+      "original_bytes": 1730,
+      "published_bytes": 1625,
+      "original_tokens": {
+        "o200k_base": 385,
+        "cl100k_base": 384
+      },
+      "published_tokens": {
+        "o200k_base": 328,
+        "cl100k_base": 327
+      }
+    },
+    {
+      "file": "studies/2026-09-07-gpt-6/agent-trials/concise_r2/003.txt",
+      "original_bytes": 640,
+      "published_bytes": 605,
+      "original_tokens": {
+        "o200k_base": 161,
+        "cl100k_base": 154
+      },
+      "published_tokens": {
+        "o200k_base": 142,
+        "cl100k_base": 135
+      }
+    },
+    {
+      "file": "studies/2026-09-07-gpt-6/agent-trials/concise_r2/initial_prompt.txt",
+      "original_bytes": 1733,
+      "published_bytes": 1628,
+      "original_tokens": {
+        "o200k_base": 387,
+        "cl100k_base": 386
+      },
+      "published_tokens": {
+        "o200k_base": 330,
+        "cl100k_base": 329
+      }
+    },
+    {
+      "file": "studies/2026-09-07-gpt-6/agent-trials/concise_r3/002.txt",
+      "original_bytes": 1789,
+      "published_bytes": 1754,
+      "original_tokens": {
+        "o200k_base": 415,
+        "cl100k_base": 407
+      },
+      "published_tokens": {
+        "o200k_base": 396,
+        "cl100k_base": 388
+      }
+    },
+    {
+      "file": "studies/2026-09-07-gpt-6/agent-trials/concise_r3/initial_prompt.txt",
+      "original_bytes": 1733,
+      "published_bytes": 1628,
+      "original_tokens": {
+        "o200k_base": 387,
+        "cl100k_base": 386
+      },
+      "published_tokens": {
+        "o200k_base": 330,
+        "cl100k_base": 329
+      }
+    },
+    {
+      "file": "studies/2026-09-07-gpt-6/agent-trials/native/005.txt",
+      "original_bytes": 961,
+      "published_bytes": 891,
+      "original_tokens": {
+        "o200k_base": 250,
+        "cl100k_base": 240
+      },
+      "published_tokens": {
+        "o200k_base": 212,
+        "cl100k_base": 202
+      }
+    },
+    {
+      "file": "studies/2026-09-07-gpt-6/agent-trials/native/006.txt",
+      "original_bytes": 1912,
+      "published_bytes": 1877,
+      "original_tokens": {
+        "o200k_base": 438,
+        "cl100k_base": 433
+      },
+      "published_tokens": {
+        "o200k_base": 419,
+        "cl100k_base": 414
+      }
+    },
+    {
+      "file": "studies/2026-09-07-gpt-6/agent-trials/native/initial_prompt.txt",
+      "original_bytes": 1532,
+      "published_bytes": 1427,
+      "original_tokens": {
+        "o200k_base": 349,
+        "cl100k_base": 348
+      },
+      "published_tokens": {
+        "o200k_base": 292,
+        "cl100k_base": 291
+      }
+    },
+    {
+      "file": "studies/2026-09-07-gpt-6/agent-trials/native_r2/002.txt",
+      "original_bytes": 1915,
+      "published_bytes": 1880,
+      "original_tokens": {
+        "o200k_base": 440,
+        "cl100k_base": 435
+      },
+      "published_tokens": {
+        "o200k_base": 421,
+        "cl100k_base": 416
+      }
+    },
+    {
+      "file": "studies/2026-09-07-gpt-6/agent-trials/native_r2/003.txt",
+      "original_bytes": 967,
+      "published_bytes": 897,
+      "original_tokens": {
+        "o200k_base": 254,
+        "cl100k_base": 244
+      },
+      "published_tokens": {
+        "o200k_base": 216,
+        "cl100k_base": 206
+      }
+    },
+    {
+      "file": "studies/2026-09-07-gpt-6/agent-trials/native_r2/initial_prompt.txt",
+      "original_bytes": 1535,
+      "published_bytes": 1430,
+      "original_tokens": {
+        "o200k_base": 351,
+        "cl100k_base": 350
+      },
+      "published_tokens": {
+        "o200k_base": 294,
+        "cl100k_base": 293
+      }
+    },
+    {
+      "file": "studies/2026-09-07-gpt-6/agent-trials/native_r3/002.txt",
+      "original_bytes": 1915,
+      "published_bytes": 1880,
+      "original_tokens": {
+        "o200k_base": 440,
+        "cl100k_base": 435
+      },
+      "published_tokens": {
+        "o200k_base": 421,
+        "cl100k_base": 416
+      }
+    },
+    {
+      "file": "studies/2026-09-07-gpt-6/agent-trials/native_r3/003.txt",
+      "original_bytes": 967,
+      "published_bytes": 897,
+      "original_tokens": {
+        "o200k_base": 254,
+        "cl100k_base": 244
+      },
+      "published_tokens": {
+        "o200k_base": 216,
+        "cl100k_base": 206
+      }
+    },
+    {
+      "file": "studies/2026-09-07-gpt-6/agent-trials/native_r3/initial_prompt.txt",
+      "original_bytes": 1535,
+      "published_bytes": 1430,
+      "original_tokens": {
+        "o200k_base": 351,
+        "cl100k_base": 350
+      },
+      "published_tokens": {
+        "o200k_base": 294,
+        "cl100k_base": 293
+      }
+    },
+    {
+      "file": "studies/2026-09-07-gpt-6/agent-trials/rtk/009.txt",
+      "original_bytes": 3294,
+      "published_bytes": 3189,
+      "original_tokens": {
+        "o200k_base": 908,
+        "cl100k_base": 893
+      },
+      "published_tokens": {
+        "o200k_base": 851,
+        "cl100k_base": 836
+      }
+    },
+    {
+      "file": "studies/2026-09-07-gpt-6/agent-trials/rtk/initial_prompt.txt",
+      "original_bytes": 1742,
+      "published_bytes": 1637,
+      "original_tokens": {
+        "o200k_base": 407,
+        "cl100k_base": 405
+      },
+      "published_tokens": {
+        "o200k_base": 350,
+        "cl100k_base": 348
+      }
+    },
+    {
+      "file": "studies/2026-09-07-gpt-6/agent-trials/rtk_r2/009.txt",
+      "original_bytes": 2693,
+      "published_bytes": 2623,
+      "original_tokens": {
+        "o200k_base": 744,
+        "cl100k_base": 738
+      },
+      "published_tokens": {
+        "o200k_base": 706,
+        "cl100k_base": 700
+      }
+    },
+    {
+      "file": "studies/2026-09-07-gpt-6/agent-trials/rtk_r2/010.txt",
+      "original_bytes": 961,
+      "published_bytes": 891,
+      "original_tokens": {
+        "o200k_base": 258,
+        "cl100k_base": 248
+      },
+      "published_tokens": {
+        "o200k_base": 220,
+        "cl100k_base": 210
+      }
+    },
+    {
+      "file": "studies/2026-09-07-gpt-6/agent-trials/rtk_r2/initial_prompt.txt",
+      "original_bytes": 1745,
+      "published_bytes": 1640,
+      "original_tokens": {
+        "o200k_base": 409,
+        "cl100k_base": 407
+      },
+      "published_tokens": {
+        "o200k_base": 352,
+        "cl100k_base": 350
+      }
+    },
+    {
+      "file": "studies/2026-09-07-gpt-6/agent-trials/rtk_r3/008.txt",
+      "original_bytes": 1061,
+      "published_bytes": 956,
+      "original_tokens": {
+        "o200k_base": 299,
+        "cl100k_base": 288
+      },
+      "published_tokens": {
+        "o200k_base": 242,
+        "cl100k_base": 231
+      }
+    },
+    {
+      "file": "studies/2026-09-07-gpt-6/agent-trials/rtk_r3/initial_prompt.txt",
+      "original_bytes": 1745,
+      "published_bytes": 1640,
+      "original_tokens": {
+        "o200k_base": 409,
+        "cl100k_base": 407
+      },
+      "published_tokens": {
+        "o200k_base": 352,
+        "cl100k_base": 350
+      }
+    },
+    {
+      "file": "studies/2026-09-07-gpt-6/captures/pytest_fail/native.stdout.txt",
+      "original_bytes": 1664,
+      "published_bytes": 1629,
+      "original_tokens": {
+        "o200k_base": 405,
+        "cl100k_base": 401
+      },
+      "published_tokens": {
+        "o200k_base": 386,
+        "cl100k_base": 382
+      }
+    },
+    {
+      "file": "studies/2026-09-07-gpt-6/captures/pytest_pass/native.stdout.txt",
+      "original_bytes": 591,
+      "published_bytes": 556,
+      "original_tokens": {
+        "o200k_base": 122,
+        "cl100k_base": 120
+      },
+      "published_tokens": {
+        "o200k_base": 103,
+        "cl100k_base": 101
+      }
+    },
+    {
+      "file": "studies/2026-09-07-gpt-6/captures/pytest_skip/native.stdout.txt",
+      "original_bytes": 606,
+      "published_bytes": 571,
+      "original_tokens": {
+        "o200k_base": 144,
+        "cl100k_base": 141
+      },
+      "published_tokens": {
+        "o200k_base": 125,
+        "cl100k_base": 122
+      }
+    },
+    {
+      "file": "studies/2026-09-07-gpt-6/captures/pytest_warning/concise.stdout.txt",
+      "original_bytes": 630,
+      "published_bytes": 595,
+      "original_tokens": {
+        "o200k_base": 156,
+        "cl100k_base": 149
+      },
+      "published_tokens": {
+        "o200k_base": 137,
+        "cl100k_base": 130
+      }
+    },
+    {
+      "file": "studies/2026-09-07-gpt-6/captures/pytest_warning/native.stdout.txt",
+      "original_bytes": 949,
+      "published_bytes": 879,
+      "original_tokens": {
+        "o200k_base": 248,
+        "cl100k_base": 238
+      },
+      "published_tokens": {
+        "o200k_base": 210,
+        "cl100k_base": 200
+      }
+    },
+    {
+      "file": "studies/2026-09-07-gpt-6/recovery/pytest_warning.txt",
+      "original_bytes": 630,
+      "published_bytes": 595,
+      "original_tokens": {
+        "o200k_base": 156,
+        "cl100k_base": 149
+      },
+      "published_tokens": {
+        "o200k_base": 137,
+        "cl100k_base": 130
+      }
+    },
+    {
+      "file": "studies/2026-09-07-gpt-6/stream-corrections.json",
+      "original_bytes": 1161,
+      "published_bytes": 1091,
+      "original_tokens": {
+        "o200k_base": 325,
+        "cl100k_base": 325
+      },
+      "published_tokens": {
+        "o200k_base": 287,
+        "cl100k_base": 287
+      }
+    }
+  ]
+}

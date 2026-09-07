@@ -1,0 +1,56 @@
+{
+  "concise": {
+    "answer_sha256": "f3b53478c521482c1f9074625350e4f44c407995e7d88bcd20d96e111b44900e",
+    "questions_correct": 6,
+    "questions_total": 6,
+    "review": "Parent manual semantic review against authored source, Git diff/message, and executed tests; not blinded."
+  },
+  "concise_r2": {
+    "answer_sha256": "954b1ab0615bce50a166242175ee2329b2277d1d579c6c8042d1eeb5878826fe",
+    "questions_correct": 6,
+    "questions_total": 6,
+    "review": "Parent manual semantic review against authored source, Git diff/message, and executed tests; not blinded."
+  },
+  "concise_r3": {
+    "answer_sha256": "06646a9c9643d38c6a3c70c5f47b2f4e8217cbab1bb8440fdeffb5de253d8eed",
+    "questions_correct": 6,
+    "questions_total": 6,
+    "review": "Parent manual semantic review against authored source, Git diff/message, and executed tests; not blinded."
+  },
+  "native": {
+    "answer_sha256": "4d7c288af13ea1acb1c40981504e1eaa2a42a866fc74b7803e58599d8c1068c7",
+    "questions_correct": 6,
+    "questions_total": 6,
+    "review": "Parent manual semantic review against authored source, Git diff/message, and executed tests; not blinded."
+  },
+  "native_r2": {
+    "answer_sha256": "3df9f1851b0551ce4bdf270b6f409b48a7dd8dd8f8a3049426fd13845c2f7f27",
+    "questions_correct": 6,
+    "questions_total": 6,
+    "review": "Parent manual semantic review against authored source, Git diff/message, and executed tests; not blinded."
+  },
+  "native_r3": {
+    "answer_sha256": "0c60ccb48ff6e0f861c4573680a5efd778084ce11fe18a96d357e738ec86a80f",
+    "questions_correct": 6,
+    "questions_total": 6,
+    "review": "Parent manual semantic review against authored source, Git diff/message, and executed tests; not blinded."
+  },
+  "rtk": {
+    "answer_sha256": "707ffcf455fc1a114e56fdc76669018e4ea8cc521cb4baf9df9d78056b0e10e0",
+    "questions_correct": 6,
+    "questions_total": 6,
+    "review": "Parent manual semantic review against authored source, Git diff/message, and executed tests; not blinded."
+  },
+  "rtk_r2": {
+    "answer_sha256": "0b585b6a37e8b631f2cae4a5aca12e93c979b9345e04e670655ec2ed7a053904",
+    "questions_correct": 6,
+    "questions_total": 6,
+    "review": "Parent manual semantic review against authored source, Git diff/message, and executed tests; not blinded."
+  },
+  "rtk_r3": {
+    "answer_sha256": "85ad5bd6e9bcce27ff4a3afc8e9bf674291d0873d60faab426517f430e243bf3",
+    "questions_correct": 6,
+    "questions_total": 6,
+    "review": "Parent manual semantic review against authored source, Git diff/message, and executed tests; not blinded."
+  }
+}

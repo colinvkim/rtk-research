@@ -1,0 +1,6 @@
+36-allow_policy("/public/route-35", roles=["reader"])
+37-allow_policy("/public/route-36", roles=["reader"])
+38-allow_policy("/public/route-37", roles=["reader"])
+39-allow_policy("/public/route-38", roles=["reader"])
+40-allow_policy("/public/route-39", roles=["reader"])
+41:allow_policy("/admin/archive", roles=["anonymous"])

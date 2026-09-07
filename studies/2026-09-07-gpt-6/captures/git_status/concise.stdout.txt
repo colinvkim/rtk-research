@@ -1,0 +1,9 @@
+MM mixed.txt
+ M policy.py
+ D removed.txt
+ M settings.py
+M  staged.txt
+?? indent_a.py
+?? indent_b.py
+?? new.txt
+?? rust/Cargo.lock
