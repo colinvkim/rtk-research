@@ -1,7 +1,5 @@
 > [!NOTE]
-> **A quick disclaimer**
->
-> Everything in this repo was automated with AI. I thought the findings were interesting, so I decided to share them.
+> Everything in this repo was automated with AI. I thought the findings were interesting, so I decided to share them. I'll do my best to update this repo when new GPT models release.
 
 # RTK Research
 
